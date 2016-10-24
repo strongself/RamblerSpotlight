@@ -1,0 +1,28 @@
+{
+  "name": "RamblerSpotlight",
+  "version": "0.1.0",
+  "summary": "A short description of RamblerSpotlight.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/RamblerSpotlight",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "k.zinovyev": "k.zinovyev@rambler-co.ru"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/RamblerSpotlight.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RamblerSpotlight/Classes/**/*{h,m}",
+  "frameworks": "CoreData",
+  "resource_bundles": {
+    "RamblerSpotlightDataBase": [
+      "RamblerSpotlight/Classes/CoreDataStack/DataModel/*.xcdatamodeld"
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+framework module RamblerSpotlight {
+  umbrella header "RamblerSpotlight-umbrella.h"
+
+  export *
+  module * { export * }
+}
