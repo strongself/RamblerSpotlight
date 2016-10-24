@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/ChangeProviders/BaseClasses/FetchedResultsControllerChangeProvider/ChangeProviderFetchRequestFactories/Protocols/ChangeProviderFetchRequestFactory.h

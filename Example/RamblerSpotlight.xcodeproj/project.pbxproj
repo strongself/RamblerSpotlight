@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C05A2C041323A039BCB2D15 /* Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D223ED49F384DAAA21706D /* Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework */; };
+		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
+		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
+		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
+		6003F59E195388D20070C39A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* AppDelegate.m */; };
+		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
+		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
+		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
+		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
+		661F34501DAF79BF00BE10FA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661F344F1DAF79BF00BE10FA /* Launch Screen.storyboard */; };
+		664FDE791DAF7C490098A2DE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 661F34901DAF7B6000BE10FA /* XCTest.framework */; };
+		666335D31DAE3D2A0038C39D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666335CE1DAE3D2A0038C39D /* MasterViewController.m */; };
+		666335D41DAE3D2A0038C39D /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 666335CF1DAE3D2A0038C39D /* DataBase.xcdatamodeld */; };
+		666335D51DAE3D2A0038C39D /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 666335D21DAE3D2A0038C39D /* DetailViewController.m */; };
+		666335D71DAE3D440038C39D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 666335D61DAE3D440038C39D /* Main.storyboard */; };
+		66D04F081DAFA2100083AAE8 /* XCTestCase+RCFHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EE21DAFA2100083AAE8 /* XCTestCase+RCFHelpers.m */; };
+		66D04F091DAFA2100083AAE8 /* FetchedResultsControllerChangeProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EEC1DAFA2100083AAE8 /* FetchedResultsControllerChangeProviderTests.m */; };
+		66D04F0A1DAFA2100083AAE8 /* ContextStorageImplementationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EEF1DAFA2100083AAE8 /* ContextStorageImplementationTests.m */; };
+		66D04F0B1DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EF21DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactoryTests.m */; };
+		66D04F0C1DAFA2100083AAE8 /* IndexerMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EF31DAFA2100083AAE8 /* IndexerMonitorTests.m */; };
+		66D04F0E1DAFA2100083AAE8 /* ObjectIndexerBaseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EF91DAFA2100083AAE8 /* ObjectIndexerBaseTests.m */; };
+		66D04F0F1DAFA2100083AAE8 /* SearchableIndexMock.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04EFB1DAFA2100083AAE8 /* SearchableIndexMock.m */; };
+		66D04F101DAFA2100083AAE8 /* IndexTransactionBatchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F071DAFA2100083AAE8 /* IndexTransactionBatchTests.m */; };
+		66D04F111DAFA6D30083AAE8 /* DataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 666335CF1DAE3D2A0038C39D /* DataBase.xcdatamodeld */; };
+		66D04F141DAFB5890083AAE8 /* IndexerStateStorageTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F131DAFB5890083AAE8 /* IndexerStateStorageTests.m */; };
+		66D04F171DAFB6300083AAE8 /* SpotlightAssemblyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F161DAFB6300083AAE8 /* SpotlightAssemblyTests.m */; };
+		66D04F1A1DAFBAD00083AAE8 /* SpotlightCoreDataHandlerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F191DAFBAD00083AAE8 /* SpotlightCoreDataHandlerTests.m */; };
+		66D04F211DAFC62F0083AAE8 /* RamblerSpotlightTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F201DAFC62F0083AAE8 /* RamblerSpotlightTests.m */; };
+		66D04F241DAFC6690083AAE8 /* CoreDataCoordinatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F231DAFC6690083AAE8 /* CoreDataCoordinatorTests.m */; };
+		66D04F261DAFC8AA0083AAE8 /* RamblerSpotlight_Testable.h in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F251DAFC8430083AAE8 /* RamblerSpotlight_Testable.h */; };
+		66D04F291DB0C99C0083AAE8 /* AppDelegateForTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 66D04F281DB0C99C0083AAE8 /* AppDelegateForTesting.m */; };
+		66E70D791DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E70D721DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.m */; };
+		66E70D7A1DAE5229007DF1C7 /* UserObjectIndexer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E70D751DAE5229007DF1C7 /* UserObjectIndexer.m */; };
+		66E70D7B1DAE5229007DF1C7 /* UserObjectTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 66E70D781DAE5229007DF1C7 /* UserObjectTransformer.m */; };
+		F91EB3EC34B525241DC7DC8E /* Pods_RamblerSpotlight_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B989D47EF8B770A8AC7DFC14 /* Pods_RamblerSpotlight_Example.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6003F5B3195388D20070C39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6003F582195388D10070C39A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6003F589195388D20070C39A;
+			remoteInfo = RamblerSpotlight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4481E05DE64D5AFFA88B092F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		6003F58A195388D20070C39A /* RamblerSpotlight_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RamblerSpotlight_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		6003F595195388D20070C39A /* RamblerSpotlight-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RamblerSpotlight-Info.plist"; sourceTree = "<group>"; };
+		6003F597195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6003F599195388D20070C39A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6003F59B195388D20070C39A /* RamblerSpotlight-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RamblerSpotlight-Prefix.pch"; sourceTree = "<group>"; };
+		6003F59C195388D20070C39A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6003F59D195388D20070C39A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6003F5AE195388D20070C39A /* RamblerSpotlight_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RamblerSpotlight_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		6481797DA30A4D0161275963 /* Pods-RamblerSpotlight_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblerSpotlight_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RamblerSpotlight_Example/Pods-RamblerSpotlight_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		661F344F1DAF79BF00BE10FA /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		661F34901DAF7B6000BE10FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		666335CD1DAE3D2A0038C39D /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		666335CE1DAE3D2A0038C39D /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		666335D01DAE3D2A0038C39D /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
+		666335D11DAE3D2A0038C39D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		666335D21DAE3D2A0038C39D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		666335D61DAE3D440038C39D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		66D04EE11DAFA2100083AAE8 /* XCTestCase+RCFHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+RCFHelpers.h"; sourceTree = "<group>"; };
+		66D04EE21DAFA2100083AAE8 /* XCTestCase+RCFHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+RCFHelpers.m"; sourceTree = "<group>"; };
+		66D04EEC1DAFA2100083AAE8 /* FetchedResultsControllerChangeProviderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FetchedResultsControllerChangeProviderTests.m; sourceTree = "<group>"; };
+		66D04EEF1DAFA2100083AAE8 /* ContextStorageImplementationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextStorageImplementationTests.m; sourceTree = "<group>"; };
+		66D04EF21DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexerMonitorOperationQueueFactoryTests.m; sourceTree = "<group>"; };
+		66D04EF31DAFA2100083AAE8 /* IndexerMonitorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexerMonitorTests.m; sourceTree = "<group>"; };
+		66D04EF91DAFA2100083AAE8 /* ObjectIndexerBaseTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectIndexerBaseTests.m; sourceTree = "<group>"; };
+		66D04EFA1DAFA2100083AAE8 /* SearchableIndexMock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchableIndexMock.h; sourceTree = "<group>"; };
+		66D04EFB1DAFA2100083AAE8 /* SearchableIndexMock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchableIndexMock.m; sourceTree = "<group>"; };
+		66D04F071DAFA2100083AAE8 /* IndexTransactionBatchTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexTransactionBatchTests.m; sourceTree = "<group>"; };
+		66D04F131DAFB5890083AAE8 /* IndexerStateStorageTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexerStateStorageTests.m; sourceTree = "<group>"; };
+		66D04F161DAFB6300083AAE8 /* SpotlightAssemblyTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpotlightAssemblyTests.m; path = Assembly/SpotlightAssemblyTests.m; sourceTree = "<group>"; };
+		66D04F191DAFBAD00083AAE8 /* SpotlightCoreDataHandlerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpotlightCoreDataHandlerTests.m; path = SpotlightCoreDataHandler/SpotlightCoreDataHandlerTests.m; sourceTree = "<group>"; };
+		66D04F1F1DAFC2410083AAE8 /* SpotlightAssembly_Testable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpotlightAssembly_Testable.h; path = Assembly/SpotlightAssembly_Testable.h; sourceTree = "<group>"; };
+		66D04F201DAFC62F0083AAE8 /* RamblerSpotlightTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RamblerSpotlightTests.m; sourceTree = "<group>"; };
+		66D04F231DAFC6690083AAE8 /* CoreDataCoordinatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataCoordinatorTests.m; path = CoreDataCoordinator/CoreDataCoordinatorTests.m; sourceTree = "<group>"; };
+		66D04F251DAFC8430083AAE8 /* RamblerSpotlight_Testable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = RamblerSpotlight_Testable.h; path = Assembly/RamblerSpotlight_Testable.h; sourceTree = "<group>"; };
+		66D04F271DB0C99C0083AAE8 /* AppDelegateForTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegateForTesting.h; sourceTree = "<group>"; };
+		66D04F281DB0C99C0083AAE8 /* AppDelegateForTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateForTesting.m; sourceTree = "<group>"; };
+		66E70D711DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserChangeProviderFetchRequestFactory.h; sourceTree = "<group>"; };
+		66E70D721DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserChangeProviderFetchRequestFactory.m; sourceTree = "<group>"; };
+		66E70D741DAE5229007DF1C7 /* UserObjectIndexer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserObjectIndexer.h; sourceTree = "<group>"; };
+		66E70D751DAE5229007DF1C7 /* UserObjectIndexer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserObjectIndexer.m; sourceTree = "<group>"; };
+		66E70D771DAE5229007DF1C7 /* UserObjectTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserObjectTransformer.h; sourceTree = "<group>"; };
+		66E70D781DAE5229007DF1C7 /* UserObjectTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserObjectTransformer.m; sourceTree = "<group>"; };
+		A017F8AD5BD00DD660144665 /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A87898230715B58BD66D8BDD /* Pods-RamblerSpotlight_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblerSpotlight_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-RamblerSpotlight_Example/Pods-RamblerSpotlight_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B56CE0DC0EA454CA91209CFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		B989D47EF8B770A8AC7DFC14 /* Pods_RamblerSpotlight_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamblerSpotlight_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6D223ED49F384DAAA21706D /* Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D73976E89A48A1931A1D659C /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E41359B9FCCCAEFDBC24E97D /* RamblerSpotlight.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = RamblerSpotlight.podspec; path = ../RamblerSpotlight.podspec; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6003F587195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
+				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
+				F91EB3EC34B525241DC7DC8E /* Pods_RamblerSpotlight_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AB195388D20070C39A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				664FDE791DAF7C490098A2DE /* XCTest.framework in Frameworks */,
+				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
+				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
+				5C05A2C041323A039BCB2D15 /* Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6003F581195388D10070C39A = {
+			isa = PBXGroup;
+			children = (
+				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
+				6003F593195388D20070C39A /* Example for RamblerSpotlight */,
+				6003F5B5195388D20070C39A /* Tests */,
+				6003F58C195388D20070C39A /* Frameworks */,
+				6003F58B195388D20070C39A /* Products */,
+				B29E938D119D68BC3C61288A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6003F58B195388D20070C39A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6003F58A195388D20070C39A /* RamblerSpotlight_Example.app */,
+				6003F5AE195388D20070C39A /* RamblerSpotlight_Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6003F58C195388D20070C39A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				661F34901DAF7B6000BE10FA /* XCTest.framework */,
+				6003F58D195388D20070C39A /* Foundation.framework */,
+				6003F58F195388D20070C39A /* CoreGraphics.framework */,
+				6003F591195388D20070C39A /* UIKit.framework */,
+				6003F5AF195388D20070C39A /* XCTest.framework */,
+				B989D47EF8B770A8AC7DFC14 /* Pods_RamblerSpotlight_Example.framework */,
+				C6D223ED49F384DAAA21706D /* Pods_RamblerSpotlight_Example_RamblerSpotlight_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6003F593195388D20070C39A /* Example for RamblerSpotlight */ = {
+			isa = PBXGroup;
+			children = (
+				66E897B21DAE4DF4000AD84C /* SpotlightConcreteClass */,
+				666335D61DAE3D440038C39D /* Main.storyboard */,
+				6003F59C195388D20070C39A /* AppDelegate.h */,
+				6003F59D195388D20070C39A /* AppDelegate.m */,
+				66D04F271DB0C99C0083AAE8 /* AppDelegateForTesting.h */,
+				66D04F281DB0C99C0083AAE8 /* AppDelegateForTesting.m */,
+				666335CD1DAE3D2A0038C39D /* MasterViewController.h */,
+				666335CE1DAE3D2A0038C39D /* MasterViewController.m */,
+				666335D11DAE3D2A0038C39D /* DetailViewController.h */,
+				666335D21DAE3D2A0038C39D /* DetailViewController.m */,
+				666335CF1DAE3D2A0038C39D /* DataBase.xcdatamodeld */,
+				6003F5A8195388D20070C39A /* Images.xcassets */,
+				6003F594195388D20070C39A /* Supporting Files */,
+				661F344F1DAF79BF00BE10FA /* Launch Screen.storyboard */,
+			);
+			name = "Example for RamblerSpotlight";
+			path = RamblerSpotlight;
+			sourceTree = "<group>";
+		};
+		6003F594195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F595195388D20070C39A /* RamblerSpotlight-Info.plist */,
+				6003F596195388D20070C39A /* InfoPlist.strings */,
+				6003F599195388D20070C39A /* main.m */,
+				6003F59B195388D20070C39A /* RamblerSpotlight-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6003F5B5195388D20070C39A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EE01DAFA2100083AAE8 /* XCTestCase+RCFHelpers */,
+				66D04EE31DAFA2100083AAE8 /* SpotlightIndexer */,
+				6003F5B6195388D20070C39A /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		6003F5B6195388D20070C39A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6003F5B7195388D20070C39A /* Tests-Info.plist */,
+				6003F5B8195388D20070C39A /* InfoPlist.strings */,
+				606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		60FF7A9C1954A5C5007DD14C /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				E41359B9FCCCAEFDBC24E97D /* RamblerSpotlight.podspec */,
+				4481E05DE64D5AFFA88B092F /* README.md */,
+				B56CE0DC0EA454CA91209CFB /* LICENSE */,
+			);
+			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		66D04EE01DAFA2100083AAE8 /* XCTestCase+RCFHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EE11DAFA2100083AAE8 /* XCTestCase+RCFHelpers.h */,
+				66D04EE21DAFA2100083AAE8 /* XCTestCase+RCFHelpers.m */,
+			);
+			path = "XCTestCase+RCFHelpers";
+			sourceTree = "<group>";
+		};
+		66D04EE31DAFA2100083AAE8 /* SpotlightIndexer */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F201DAFC62F0083AAE8 /* RamblerSpotlightTests.m */,
+				66D04F251DAFC8430083AAE8 /* RamblerSpotlight_Testable.h */,
+				66D04F151DAFB6110083AAE8 /* Assembly */,
+				66D04F121DAFB5890083AAE8 /* IndexerStateStorage */,
+				66D04EE41DAFA2100083AAE8 /* ChangeProviders */,
+				66D04EED1DAFA2100083AAE8 /* CoreDataStack */,
+				66D04EF01DAFA2100083AAE8 /* IndexerMonitor */,
+				66D04EF61DAFA2100083AAE8 /* ObjectIndexers */,
+				66D04F051DAFA2100083AAE8 /* Transactions */,
+			);
+			path = SpotlightIndexer;
+			sourceTree = "<group>";
+		};
+		66D04EE41DAFA2100083AAE8 /* ChangeProviders */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EE51DAFA2100083AAE8 /* BaseClasses */,
+			);
+			path = ChangeProviders;
+			sourceTree = "<group>";
+		};
+		66D04EE51DAFA2100083AAE8 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EE61DAFA2100083AAE8 /* FetchedResultsControllerChangeProvider */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		66D04EE61DAFA2100083AAE8 /* FetchedResultsControllerChangeProvider */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EEC1DAFA2100083AAE8 /* FetchedResultsControllerChangeProviderTests.m */,
+			);
+			path = FetchedResultsControllerChangeProvider;
+			sourceTree = "<group>";
+		};
+		66D04EED1DAFA2100083AAE8 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F221DAFC63A0083AAE8 /* Coordinator */,
+				66D04F181DAFBA9D0083AAE8 /* CoreDataHandler */,
+				66D04EEE1DAFA2100083AAE8 /* ContextStorage */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		66D04EEE1DAFA2100083AAE8 /* ContextStorage */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EEF1DAFA2100083AAE8 /* ContextStorageImplementationTests.m */,
+			);
+			path = ContextStorage;
+			sourceTree = "<group>";
+		};
+		66D04EF01DAFA2100083AAE8 /* IndexerMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EF11DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactory */,
+				66D04EF31DAFA2100083AAE8 /* IndexerMonitorTests.m */,
+			);
+			path = IndexerMonitor;
+			sourceTree = "<group>";
+		};
+		66D04EF11DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactory */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EF21DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactoryTests.m */,
+			);
+			path = IndexerMonitorOperationQueueFactory;
+			sourceTree = "<group>";
+		};
+		66D04EF61DAFA2100083AAE8 /* ObjectIndexers */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EF71DAFA2100083AAE8 /* BaseClasses */,
+			);
+			path = ObjectIndexers;
+			sourceTree = "<group>";
+		};
+		66D04EF71DAFA2100083AAE8 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EF81DAFA2100083AAE8 /* ObjectIndexerBase */,
+			);
+			path = BaseClasses;
+			sourceTree = "<group>";
+		};
+		66D04EF81DAFA2100083AAE8 /* ObjectIndexerBase */ = {
+			isa = PBXGroup;
+			children = (
+				66D04EF91DAFA2100083AAE8 /* ObjectIndexerBaseTests.m */,
+				66D04EFA1DAFA2100083AAE8 /* SearchableIndexMock.h */,
+				66D04EFB1DAFA2100083AAE8 /* SearchableIndexMock.m */,
+			);
+			path = ObjectIndexerBase;
+			sourceTree = "<group>";
+		};
+		66D04F051DAFA2100083AAE8 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F061DAFA2100083AAE8 /* IndexTransactionBatch */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		66D04F061DAFA2100083AAE8 /* IndexTransactionBatch */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F071DAFA2100083AAE8 /* IndexTransactionBatchTests.m */,
+			);
+			path = IndexTransactionBatch;
+			sourceTree = "<group>";
+		};
+		66D04F121DAFB5890083AAE8 /* IndexerStateStorage */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F131DAFB5890083AAE8 /* IndexerStateStorageTests.m */,
+			);
+			path = IndexerStateStorage;
+			sourceTree = "<group>";
+		};
+		66D04F151DAFB6110083AAE8 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F1F1DAFC2410083AAE8 /* SpotlightAssembly_Testable.h */,
+				66D04F161DAFB6300083AAE8 /* SpotlightAssemblyTests.m */,
+			);
+			name = Assembly;
+			sourceTree = "<group>";
+		};
+		66D04F181DAFBA9D0083AAE8 /* CoreDataHandler */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F191DAFBAD00083AAE8 /* SpotlightCoreDataHandlerTests.m */,
+			);
+			name = CoreDataHandler;
+			sourceTree = "<group>";
+		};
+		66D04F221DAFC63A0083AAE8 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				66D04F231DAFC6690083AAE8 /* CoreDataCoordinatorTests.m */,
+			);
+			name = Coordinator;
+			sourceTree = "<group>";
+		};
+		66E70D701DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory */ = {
+			isa = PBXGroup;
+			children = (
+				66E70D711DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.h */,
+				66E70D721DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.m */,
+			);
+			name = UserChangeProviderFetchRequestFactory;
+			path = ConcreteClass/UserChangeProviderFetchRequestFactory;
+			sourceTree = "<group>";
+		};
+		66E70D731DAE5229007DF1C7 /* UserObjectIndexer */ = {
+			isa = PBXGroup;
+			children = (
+				66E70D741DAE5229007DF1C7 /* UserObjectIndexer.h */,
+				66E70D751DAE5229007DF1C7 /* UserObjectIndexer.m */,
+			);
+			name = UserObjectIndexer;
+			path = ConcreteClass/UserObjectIndexer;
+			sourceTree = "<group>";
+		};
+		66E70D761DAE5229007DF1C7 /* UserObjectTransformer */ = {
+			isa = PBXGroup;
+			children = (
+				66E70D771DAE5229007DF1C7 /* UserObjectTransformer.h */,
+				66E70D781DAE5229007DF1C7 /* UserObjectTransformer.m */,
+			);
+			name = UserObjectTransformer;
+			path = ConcreteClass/UserObjectTransformer;
+			sourceTree = "<group>";
+		};
+		66E897B21DAE4DF4000AD84C /* SpotlightConcreteClass */ = {
+			isa = PBXGroup;
+			children = (
+				66E70D701DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory */,
+				66E70D731DAE5229007DF1C7 /* UserObjectIndexer */,
+				66E70D761DAE5229007DF1C7 /* UserObjectTransformer */,
+			);
+			name = SpotlightConcreteClass;
+			sourceTree = "<group>";
+		};
+		B29E938D119D68BC3C61288A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6481797DA30A4D0161275963 /* Pods-RamblerSpotlight_Example.debug.xcconfig */,
+				A87898230715B58BD66D8BDD /* Pods-RamblerSpotlight_Example.release.xcconfig */,
+				A017F8AD5BD00DD660144665 /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.debug.xcconfig */,
+				D73976E89A48A1931A1D659C /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6003F589195388D20070C39A /* RamblerSpotlight_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RamblerSpotlight_Example" */;
+			buildPhases = (
+				0E6FB8006CAACA32042CCE71 /* Check Pods Manifest.lock */,
+				6003F586195388D20070C39A /* Sources */,
+				6003F587195388D20070C39A /* Frameworks */,
+				6003F588195388D20070C39A /* Resources */,
+				258DE8812979BAD9704288DC /* Embed Pods Frameworks */,
+				5D5F927B6F078946D7CFAA4B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RamblerSpotlight_Example;
+			productName = RamblerSpotlight;
+			productReference = 6003F58A195388D20070C39A /* RamblerSpotlight_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6003F5AD195388D20070C39A /* RamblerSpotlight_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RamblerSpotlight_Tests" */;
+			buildPhases = (
+				248146AF4D113C7AB3D1271E /* Check Pods Manifest.lock */,
+				6003F5AA195388D20070C39A /* Sources */,
+				6003F5AB195388D20070C39A /* Frameworks */,
+				6003F5AC195388D20070C39A /* Resources */,
+				8D097E8751599055B5F30C34 /* Embed Pods Frameworks */,
+				EC58ECC210BD14B568B3AD7C /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6003F5B4195388D20070C39A /* PBXTargetDependency */,
+			);
+			name = RamblerSpotlight_Tests;
+			productName = RamblerSpotlightTests;
+			productReference = 6003F5AE195388D20070C39A /* RamblerSpotlight_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6003F582195388D10070C39A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RS;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = k.zinovyev;
+				TargetAttributes = {
+					6003F5AD195388D20070C39A = {
+						ProvisioningStyle = Manual;
+						TestTargetID = 6003F589195388D20070C39A;
+					};
+				};
+			};
+			buildConfigurationList = 6003F585195388D10070C39A /* Build configuration list for PBXProject "RamblerSpotlight" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6003F581195388D10070C39A;
+			productRefGroup = 6003F58B195388D20070C39A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6003F589195388D20070C39A /* RamblerSpotlight_Example */,
+				6003F5AD195388D20070C39A /* RamblerSpotlight_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6003F588195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666335D71DAE3D440038C39D /* Main.storyboard in Resources */,
+				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
+				661F34501DAF79BF00BE10FA /* Launch Screen.storyboard in Resources */,
+				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AC195388D20070C39A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E6FB8006CAACA32042CCE71 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		248146AF4D113C7AB3D1271E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		258DE8812979BAD9704288DC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerSpotlight_Example/Pods-RamblerSpotlight_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D5F927B6F078946D7CFAA4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerSpotlight_Example/Pods-RamblerSpotlight_Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D097E8751599055B5F30C34 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC58ECC210BD14B568B3AD7C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests/Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6003F586195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666335D51DAE3D2A0038C39D /* DetailViewController.m in Sources */,
+				6003F59E195388D20070C39A /* AppDelegate.m in Sources */,
+				666335D31DAE3D2A0038C39D /* MasterViewController.m in Sources */,
+				66D04F291DB0C99C0083AAE8 /* AppDelegateForTesting.m in Sources */,
+				66E70D7B1DAE5229007DF1C7 /* UserObjectTransformer.m in Sources */,
+				6003F59A195388D20070C39A /* main.m in Sources */,
+				666335D41DAE3D2A0038C39D /* DataBase.xcdatamodeld in Sources */,
+				66E70D791DAE5229007DF1C7 /* UserChangeProviderFetchRequestFactory.m in Sources */,
+				66E70D7A1DAE5229007DF1C7 /* UserObjectIndexer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6003F5AA195388D20070C39A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D04F261DAFC8AA0083AAE8 /* RamblerSpotlight_Testable.h in Sources */,
+				66D04F1A1DAFBAD00083AAE8 /* SpotlightCoreDataHandlerTests.m in Sources */,
+				66D04F101DAFA2100083AAE8 /* IndexTransactionBatchTests.m in Sources */,
+				66D04F081DAFA2100083AAE8 /* XCTestCase+RCFHelpers.m in Sources */,
+				66D04F111DAFA6D30083AAE8 /* DataBase.xcdatamodeld in Sources */,
+				66D04F0B1DAFA2100083AAE8 /* IndexerMonitorOperationQueueFactoryTests.m in Sources */,
+				66D04F0E1DAFA2100083AAE8 /* ObjectIndexerBaseTests.m in Sources */,
+				66D04F0C1DAFA2100083AAE8 /* IndexerMonitorTests.m in Sources */,
+				66D04F241DAFC6690083AAE8 /* CoreDataCoordinatorTests.m in Sources */,
+				66D04F0F1DAFA2100083AAE8 /* SearchableIndexMock.m in Sources */,
+				66D04F141DAFB5890083AAE8 /* IndexerStateStorageTests.m in Sources */,
+				66D04F171DAFB6300083AAE8 /* SpotlightAssemblyTests.m in Sources */,
+				66D04F211DAFC62F0083AAE8 /* RamblerSpotlightTests.m in Sources */,
+				66D04F0A1DAFA2100083AAE8 /* ContextStorageImplementationTests.m in Sources */,
+				66D04F091DAFA2100083AAE8 /* FetchedResultsControllerChangeProviderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6003F5B4195388D20070C39A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6003F589195388D20070C39A /* RamblerSpotlight_Example */;
+			targetProxy = 6003F5B3195388D20070C39A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6003F596195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F597195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6003F5B9195388D20070C39A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6003F5BD195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6003F5BE195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				OTHER_LIBTOOLFLAGS = "$(inherited)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6003F5C0195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6481797DA30A4D0161275963 /* Pods-RamblerSpotlight_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RamblerSpotlight/RamblerSpotlight-Prefix.pch";
+				INFOPLIST_FILE = "RamblerSpotlight/RamblerSpotlight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULE_NAME = ExampleApp;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RamblerSpotlight-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		6003F5C1195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87898230715B58BD66D8BDD /* Pods-RamblerSpotlight_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RamblerSpotlight/RamblerSpotlight-Prefix.pch";
+				INFOPLIST_FILE = "RamblerSpotlight/RamblerSpotlight-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MODULE_NAME = ExampleApp;
+				OTHER_CFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.RamblerSpotlight-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		6003F5C3195388D20070C39A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A017F8AD5BD00DD660144665 /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamblerSpotlight_Example.app/RamblerSpotlight_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		6003F5C4195388D20070C39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D73976E89A48A1931A1D659C /* Pods-RamblerSpotlight_Example-RamblerSpotlight_Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RamblerSpotlight_Example.app/RamblerSpotlight_Example";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6003F585195388D10070C39A /* Build configuration list for PBXProject "RamblerSpotlight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5BD195388D20070C39A /* Debug */,
+				6003F5BE195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5BF195388D20070C39A /* Build configuration list for PBXNativeTarget "RamblerSpotlight_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C0195388D20070C39A /* Debug */,
+				6003F5C1195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "RamblerSpotlight_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6003F5C3195388D20070C39A /* Debug */,
+				6003F5C4195388D20070C39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		666335CF1DAE3D2A0038C39D /* DataBase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				666335D01DAE3D2A0038C39D /* DataBase.xcdatamodel */,
+			);
+			currentVersion = 666335D01DAE3D2A0038C39D /* DataBase.xcdatamodel */;
+			path = DataBase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6003F582195388D10070C39A /* Project object */;
+}

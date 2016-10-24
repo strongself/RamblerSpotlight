@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/SpotlightIndexerAssembly/SpotlightAssembly.h
