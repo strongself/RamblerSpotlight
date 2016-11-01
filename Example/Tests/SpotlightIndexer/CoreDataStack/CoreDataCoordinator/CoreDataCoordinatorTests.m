@@ -41,7 +41,8 @@ static NSString *const RSDataModelName = @"SpotlightIndexer";
     [super setUp];
     
     self.mockContextStorage = [[ContextStorageImplementation alloc] initWithAppContext:nil];
-    self.coordinator = [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:self.mockContextStorage];
+    self.coordinator = [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:self.mockContextStorage
+                                                                                          fileManager:[NSFileManager defaultManager]];
 }
 
 - (void)tearDown {

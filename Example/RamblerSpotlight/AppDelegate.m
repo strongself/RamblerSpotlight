@@ -72,14 +72,16 @@
         viewController.detailItem = user;
         [navigationController pushViewController:viewController animated:YES];
         
-        
-    } else
-        if ([navigationController.topViewController isKindOfClass:[DetailViewController class]]) {
-            DetailViewController *viewController = (DetailViewController *)navigationController.topViewController;
-            viewController.detailItem = user;
+        return YES;
     }
     
-    return YES;
+    if ([navigationController.topViewController isKindOfClass:[DetailViewController class]]) {
+        DetailViewController *viewController = (DetailViewController *)navigationController.topViewController;
+        viewController.detailItem = user;
+        return YES;
+    }
+    
+    return NO;
 }
 
 #pragma mark - Core Data stack

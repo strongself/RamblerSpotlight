@@ -33,11 +33,9 @@
 
 - (instancetype)initWithAppContext:(NSManagedObjectContext *)appContext {
     self = [super init];
-    
     if (self) {
         _appContext = appContext;
     }
-    
     return self;
 }
 

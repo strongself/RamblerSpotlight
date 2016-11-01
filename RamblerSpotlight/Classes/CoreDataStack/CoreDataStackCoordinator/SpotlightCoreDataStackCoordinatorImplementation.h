@@ -23,6 +23,7 @@
 #import "SpotlightCoreDataStackCoordinator.h"
 
 @protocol ContextFiller;
+@protocol ContextProvider;
 
 /**
  @author Egor Tolstoy
@@ -31,6 +32,15 @@
  */
 @interface SpotlightCoreDataStackCoordinatorImplementation : NSObject <SpotlightCoreDataStackCoordinator>
 
-+ (instancetype)coordinatorWithContextStorage:(id<ContextFiller>)contextStorage;
+/**
+ @author Konstantin Zinovyev
+
+ Create SpotlightCoreDataStackCoordinator's instance
+ @param contextStorage Object conforms ContextFiller
+
+ @return SpotlightCoreDataStackCoordinatorImplementation
+ */
++ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>) contextStorage
+                                  fileManager:(NSFileManager *)fileManager;
 
 @end

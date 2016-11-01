@@ -27,6 +27,10 @@
 #import "SpotlightCoreDataHandler.h"
 
 static NSUInteger const RSTransactionBatchSize = 1000;
+static NSUInteger const RSIndexInsertIdentifiers = 0;
+static NSUInteger const RSIndexDeleteIdentifiers = 1;
+static NSUInteger const RSIndexMoveIdentifiers = 2;
+static NSUInteger const RSIndexUpdateIdentifiers = 3;
 
 @interface IndexerStateStorage ()
 
@@ -126,10 +130,10 @@ static NSUInteger const RSTransactionBatchSize = 1000;
     }
     
     return [IndexTransactionBatch batchWithObjectType:state.objectType
-                                    insertIdentifiers:sliceSetsArray[0]
-                                    updateIdentifiers:sliceSetsArray[1]
-                                    deleteIdentifiers:sliceSetsArray[2]
-                                      moveIdentifiers:sliceSetsArray[3]];
+                                    insertIdentifiers:sliceSetsArray[RSIndexInsertIdentifiers]
+                                    updateIdentifiers:sliceSetsArray[RSIndexUpdateIdentifiers]
+                                    deleteIdentifiers:sliceSetsArray[RSIndexDeleteIdentifiers]
+                                      moveIdentifiers:sliceSetsArray[RSIndexMoveIdentifiers]];
 }
 
 - (void)removeProcessedBatch:(IndexTransactionBatch *)batch {
@@ -150,14 +154,13 @@ static NSUInteger const RSTransactionBatchSize = 1000;
                                   batch.moveIdentifiers,
                                   batch.deleteIdentifiers];
         
-        for (int i = 0; i < changeTypes.count; i++) {
-            NSNumber *changeTypeNumber = changeTypes[i];
+        [changeTypes enumerateObjectsUsingBlock:^(NSNumber *changeTypeNumber, NSUInteger idx, BOOL * _Nonnull stop) {
             NSFetchedResultsChangeType changeType = [changeTypeNumber unsignedIntegerValue];
-            NSOrderedSet *identifiers = batchChanges[i];
+            NSOrderedSet *identifiers = batchChanges[idx];
             NSArray *identifierArray = [identifiers array];
             [state removeIdentifiers:identifierArray
                              forType:changeType];
-        }
+        }];
         
         state.lastChangeDate = [NSDate date];
     }];

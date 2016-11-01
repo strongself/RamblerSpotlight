@@ -34,23 +34,27 @@ static NSString *const RSBundleType = @"bundle";
 @interface SpotlightCoreDataStackCoordinatorImplementation ()
 
 @property (nonatomic, strong, readwrite) id<ContextFiller, ContextProvider> contextStorage;
-
+@property (nonatomic, strong) NSFileManager *fileManager;
 @end
 
 @implementation SpotlightCoreDataStackCoordinatorImplementation
 
 #pragma mark - Initialization
 
-- (instancetype)initWithContextStorage:(id<ContextFiller, ContextProvider>)contextStorage {
+- (instancetype)initWithContextStorage:(id<ContextFiller, ContextProvider>)contextStorage
+                           fileManager:(NSFileManager *)fileManager {
     self = [super init];
     if (self) {
         _contextStorage = contextStorage;
+        _fileManager = fileManager;
     }
     return self;
 }
 
-+ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>) contextStorage {
-    return [[self alloc] initWithContextStorage:contextStorage];
++ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>) contextStorage
+                                  fileManager:(NSFileManager *)fileManager {
+    return [[self alloc] initWithContextStorage:contextStorage
+                                    fileManager:fileManager];
 }
 
 #pragma mark - <SpotlightCoreDataStackCoordinator>
@@ -97,7 +101,7 @@ static NSString *const RSBundleType = @"bundle";
     
     for(NSPersistentStore *store in stores) {
         [storeCoordinator removePersistentStore:store error:nil];
-        [[NSFileManager defaultManager] removeItemAtPath:store.URL.path error:nil];
+        [self.fileManager removeItemAtPath:store.URL.path error:nil];
     }
 }
 

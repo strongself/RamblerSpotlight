@@ -21,13 +21,14 @@
 #import "IndexerMonitorOperationQueueFactory.h"
 
 static NSString *const RSIndexerMonitorOperationQueueName = @"ru.rambler.Conferences.IndexerMonitorOperationQueue";
+static NSInteger const RSMaxConcurrentOperationCount = 1;
 
 @implementation IndexerMonitorOperationQueueFactory
 
 - (NSOperationQueue *)createIndexerOperationQueue {
     NSOperationQueue *queue = [NSOperationQueue new];
     queue.name = RSIndexerMonitorOperationQueueName;
-    [queue setMaxConcurrentOperationCount:1];
+    [queue setMaxConcurrentOperationCount:RSMaxConcurrentOperationCount];
     return queue;
 }
 

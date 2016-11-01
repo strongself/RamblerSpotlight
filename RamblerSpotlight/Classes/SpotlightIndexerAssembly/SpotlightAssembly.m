@@ -32,10 +32,6 @@
 #import "SpotlightEntityObject.h"
 #import "ObjectIndexerBase.h"
 
-@interface SpotlightAssembly ()
-
-@end
-
 @implementation SpotlightAssembly
 
 #pragma mark - IndexMonitor
@@ -61,11 +57,11 @@
     return indexerMonitor;
 }
 
-
 #pragma mark - CoreData objects
 
 - (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(ContextStorageImplementation *)contextFiller {
-    return [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:contextFiller];
+    return [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:contextFiller
+                                                                              fileManager:[self fileManager]];
 }
 
 - (ContextStorageImplementation *)contextStorageWithAppContext:(NSManagedObjectContext *)appContext {
@@ -98,7 +94,10 @@
         [indexers addObject:indexer];
     }
     return [indexers copy];
+}
 
+- (NSFileManager *)fileManager {
+    return [NSFileManager defaultManager];
 }
 
 @end

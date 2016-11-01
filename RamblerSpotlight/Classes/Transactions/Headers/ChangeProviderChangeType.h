@@ -21,10 +21,36 @@
 #ifndef Header_h
 #define Header_h
 
+/**
+ @author Konstantin Zinovyev
+ 
+ Defines type of changes from Core Data.
+ */
 typedef NS_ENUM(NSUInteger, ChangeProviderChangeType) {
+    
+    /**
+     @author Konstantin Zinovyev
+     
+     Inserted objects in Core Data
+     */
     ChangeProviderChangeInsert = 1,
+    /**
+     @author Konstantin Zinovyev
+     
+     Deleted objects in Core Data
+     */
     ChangeProviderChangeDelete = 2,
+    /**
+     @author Konstantin Zinovyev
+     
+     Moved objects in Core Data
+     */
     ChangeProviderChangeMove = 3,
+    /**
+     @author Konstantin Zinovyev
+     
+     Updated objects in Core Data
+     */
     ChangeProviderChangeUpdate = 4
 };
 

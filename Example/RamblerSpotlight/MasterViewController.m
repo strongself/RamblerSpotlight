@@ -20,7 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.userNames = @[@"Betty Holberton", @"Marlyn Meltzer",  @"Grace Hopper", @"Kathleen Antonelli", @"Ruth Teitelbaum", @"Jean Bartik", @"Frances Spence", @"Grete Hermann", @"Ada Lovelace", @"Adele Goldberg"];
+    self.userNames = @[@"Betty Holberton",
+                       @"Marlyn Meltzer",
+                       @"Grace Hopper",
+                       @"Kathleen Antonelli",
+                       @"Ruth Teitelbaum",
+                       @"Jean Bartik",
+                       @"Frances Spence",
+                       @"Grete Hermann",
+                       @"Ada Lovelace",
+                       @"Adele Goldberg"];
     
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;

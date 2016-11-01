@@ -31,8 +31,25 @@
  */
 @interface SpotlightEntityObject : NSObject
 
+/**
+ @author Konstantin Zinovyev
+ 
+ Object responsible for transforming indexing object to identifier and backwards
+ */
 @property (nonatomic, strong, readonly) id<ObjectTransformer> objectTransformer;
+
+/**
+ @author Konstantin Zinovyev
+ 
+ Responsible for the functionality of factory providing fetch requests for ChangeProvider
+ */
 @property (nonatomic, strong, readonly) id<ChangeProviderFetchRequestFactory> requestFactory;
+
+/**
+ @author Konstantin Zinovyev
+ 
+ Responsible for indexing data of specific class
+ */
 @property (nonatomic, strong, readonly) id<ObjectIndexer> objectIndexer;
 
 + (instancetype)entityObjectWithObjectTransformer:(id<ObjectTransformer>)objectTransformer

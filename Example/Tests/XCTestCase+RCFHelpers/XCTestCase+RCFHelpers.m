@@ -39,7 +39,7 @@
 
 - (SpotlightCoreDataStackCoordinatorImplementation *)setupCoreDataStackForTests {
     ContextStorageImplementation *storage = [[ContextStorageImplementation alloc] init];
-    SpotlightCoreDataStackCoordinatorImplementation *coordinator = [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:storage];
+    SpotlightCoreDataStackCoordinatorImplementation *coordinator = [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:storage fileManager:[NSFileManager defaultManager]];
     [coordinator setupCoreDataStack];
     return coordinator;
     
