@@ -60,8 +60,9 @@
 #pragma mark - CoreData objects
 
 - (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(ContextStorageImplementation *)contextFiller {
+    NSFileManager *fileManager = [self fileManager];
     return [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:contextFiller
-                                                                              fileManager:[self fileManager]];
+                                                                              fileManager:fileManager];
 }
 
 - (ContextStorageImplementation *)contextStorageWithAppContext:(NSManagedObjectContext *)appContext {

@@ -27,10 +27,10 @@
 #import "SpotlightCoreDataHandler.h"
 
 static NSUInteger const RSTransactionBatchSize = 1000;
-static NSUInteger const RSIndexInsertIdentifiers = 0;
-static NSUInteger const RSIndexDeleteIdentifiers = 1;
-static NSUInteger const RSIndexMoveIdentifiers = 2;
-static NSUInteger const RSIndexUpdateIdentifiers = 3;
+static NSUInteger const RSPositionInsertInBatch = 0;
+static NSUInteger const RSPositionUpdateInBatch = 1;
+static NSUInteger const RSPositionDeleteInBatch = 2;
+static NSUInteger const RSPositionMoveInBatch = 3;
 
 @interface IndexerStateStorage ()
 
@@ -130,10 +130,10 @@ static NSUInteger const RSIndexUpdateIdentifiers = 3;
     }
     
     return [IndexTransactionBatch batchWithObjectType:state.objectType
-                                    insertIdentifiers:sliceSetsArray[RSIndexInsertIdentifiers]
-                                    updateIdentifiers:sliceSetsArray[RSIndexUpdateIdentifiers]
-                                    deleteIdentifiers:sliceSetsArray[RSIndexDeleteIdentifiers]
-                                      moveIdentifiers:sliceSetsArray[RSIndexMoveIdentifiers]];
+                                    insertIdentifiers:sliceSetsArray[RSPositionInsertInBatch]
+                                    updateIdentifiers:sliceSetsArray[RSPositionUpdateInBatch]
+                                    deleteIdentifiers:sliceSetsArray[RSPositionDeleteInBatch]
+                                      moveIdentifiers:sliceSetsArray[RSPositionMoveInBatch]];
 }
 
 - (void)removeProcessedBatch:(IndexTransactionBatch *)batch {

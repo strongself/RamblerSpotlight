@@ -24,8 +24,8 @@
 
 @interface ContextStorageImplementation ()
 
-    @property (nonatomic, strong) NSManagedObjectContext *spotlightPrimaryContext;
-    @property (nonatomic, strong) NSManagedObjectContext *appContext;
+@property (nonatomic, strong) NSManagedObjectContext *spotlightPrimaryContext;
+@property (nonatomic, strong) NSManagedObjectContext *appContext;
 
 @end
 

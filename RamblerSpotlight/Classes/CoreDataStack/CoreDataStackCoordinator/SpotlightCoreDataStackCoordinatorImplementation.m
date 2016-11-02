@@ -34,7 +34,8 @@ static NSString *const RSBundleType = @"bundle";
 @interface SpotlightCoreDataStackCoordinatorImplementation ()
 
 @property (nonatomic, strong, readwrite) id<ContextFiller, ContextProvider> contextStorage;
-@property (nonatomic, strong) NSFileManager *fileManager;
+@property (nonatomic, strong, readwrite) NSFileManager *fileManager;
+
 @end
 
 @implementation SpotlightCoreDataStackCoordinatorImplementation
@@ -51,7 +52,7 @@ static NSString *const RSBundleType = @"bundle";
     return self;
 }
 
-+ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>) contextStorage
++ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>)contextStorage
                                   fileManager:(NSFileManager *)fileManager {
     return [[self alloc] initWithContextStorage:contextStorage
                                     fileManager:fileManager];

@@ -21,7 +21,7 @@
 #import "IndexerMonitorOperationQueueFactory.h"
 
 static NSString *const RSIndexerMonitorOperationQueueName = @"ru.rambler.Conferences.IndexerMonitorOperationQueue";
-static NSInteger const RSMaxConcurrentOperationCount = 1;
+static NSUInteger const RSMaxConcurrentOperationCount = 1;
 
 @implementation IndexerMonitorOperationQueueFactory
 
