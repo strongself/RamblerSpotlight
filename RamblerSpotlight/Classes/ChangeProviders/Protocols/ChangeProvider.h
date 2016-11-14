@@ -57,3 +57,4 @@ typedef void(^ChangeProviderInitialIndexingBlock)(NSString *objectType, NSString
 - (void)processObjectsForInitialIndexingWithBlock:(ChangeProviderInitialIndexingBlock)block;
 
 @end
+
