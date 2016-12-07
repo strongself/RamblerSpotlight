@@ -43,7 +43,7 @@
  @param appContext      A storage which contains NSManagedObjectContexts
  @param searchableIndex CSSearchableIndex's object
  */
-- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray *)entityObjects
+- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray<SpotlightEntityObject *> *)entityObjects
                                         appContext:(NSManagedObjectContext *)appContext
                                    searchableIndex:(CSSearchableIndex *)searchableIndex;
 

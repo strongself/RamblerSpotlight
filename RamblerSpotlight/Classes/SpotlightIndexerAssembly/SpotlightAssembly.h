@@ -26,6 +26,7 @@
 @protocol ChangeProviderDelegate;
 @class CSSearchableIndex;
 @class NSManagedObjectContext;
+@class SpotlightEntityObject;
 
 /**
  Factory provides methods for creating all RamblerSpotlight's components
@@ -41,7 +42,7 @@
 
  @return IndexerMonitor
  */
-- (id<ChangeProviderDelegate>)indexerMonitorWithEntityObjects:(NSArray *)objects
+- (id<ChangeProviderDelegate>)indexerMonitorWithEntityObjects:(NSArray<SpotlightEntityObject *> *)objects
                                                contextStorage:(id<ContextProvider, ContextFiller>)contextStorage
                                               searchableIndex:(CSSearchableIndex *)searchableIndex;
 

@@ -29,8 +29,8 @@
 
 @interface IndexerMonitor ()
 
-@property (nonatomic, copy) NSArray *indexers;
-@property (nonatomic, copy) NSArray *changeProviders;
+@property (nonatomic, copy) NSArray<id<ObjectIndexer>> *indexers;
+@property (nonatomic, copy) NSArray<id<ChangeProvider>> *changeProviders;
 @property (nonatomic, strong) IndexerStateStorage *stateStorage;
 @property (nonatomic, strong) IndexerMonitorOperationQueueFactory *queueFactory;
 @property (nonatomic, strong) NSOperationQueue *operationQueue;

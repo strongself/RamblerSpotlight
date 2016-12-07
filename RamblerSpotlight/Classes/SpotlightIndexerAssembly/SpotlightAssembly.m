@@ -36,7 +36,7 @@
 
 #pragma mark - IndexMonitor
 
-- (IndexerMonitor *)indexerMonitorWithEntityObjects:(NSArray *)objects
+- (IndexerMonitor *)indexerMonitorWithEntityObjects:(NSArray<SpotlightEntityObject *> *)objects
                                      contextStorage:(ContextStorageImplementation *)contextStorage
                                     searchableIndex:(CSSearchableIndex *)searchableIndex {
     
@@ -71,7 +71,7 @@
 
 #pragma mark - Private
 
-- (NSArray<ChangeProvider> *)providersFromSpotlightEntititesObjects:(NSArray *)objects
+- (NSArray<ChangeProvider> *)providersFromSpotlightEntititesObjects:(NSArray<SpotlightEntityObject *> *)objects
                                                      contextStorage:(ContextStorageImplementation *)contextStorage {
     NSMutableArray<ChangeProvider> *providers = [NSMutableArray<ChangeProvider> new];
     for (SpotlightEntityObject *object in objects) {
@@ -84,7 +84,7 @@
     return [providers copy];
 }
 
-- (NSArray<ObjectIndexer> *)indexersFromSpotlightEntititesObjects:(NSArray *)objects
+- (NSArray<ObjectIndexer> *)indexersFromSpotlightEntititesObjects:(NSArray<SpotlightEntityObject *> *)objects
                                                   searchableIndex:(CSSearchableIndex *) searchableIndex{
     NSMutableArray<ObjectIndexer> *indexers = [NSMutableArray<ObjectIndexer> new];
     for (SpotlightEntityObject *object in objects) {
