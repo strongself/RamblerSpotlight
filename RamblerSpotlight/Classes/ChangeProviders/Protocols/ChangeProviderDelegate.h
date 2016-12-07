@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,15 +25,11 @@
 @protocol ChangeProvider;
 
 /**
- @author Egor Tolstoy
- 
  The protocol of object capable of processing tracked objects changes.
  */
 @protocol ChangeProviderDelegate <NSObject>
 
 /**
- @author Egor Tolstoy
- 
  Notifies about object change event
  
  @param changeProvider   ChangeProvider itself
@@ -47,8 +43,6 @@
       objectIdentifier:(NSString *)objectIdentifier;
 
 /**
- @author Egor Tolstoy
- 
  Method notifies delegate that a batch of changes is over
  
  @param changeProvider ChangeProvider itself

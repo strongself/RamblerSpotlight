@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,35 +23,26 @@
 @class NSManagedObjectContext;
 
 /**
- @author Egor Tolstoy
- 
  Describes an object responsible for setting up CoreData stack
  */
 @protocol SpotlightCoreDataStackCoordinator <NSObject>
 
 /**
- @author Egor Tolstoy
- 
  Initiates CoreData stack setting up
  */
 - (void)setupCoreDataStack;
 
 /**
- @author Konstantin Zinovyev
- 
  Initiates CoreData stack deleting
  */
 - (void)clearDatabaseFilesSpotlight;
 
-
 /**
- @author Konstantin Zinovyev
-
  Set context that used in application
  
  @param context NSManagedObjectContext
  */
-- (void)setAppCoreDataContext:(NSManagedObjectContext *)context;
+- (void)updateAppCoreDataContext:(NSManagedObjectContext *)context;
 
 
 @end

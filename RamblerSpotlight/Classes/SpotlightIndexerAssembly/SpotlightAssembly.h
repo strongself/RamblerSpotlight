@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -28,30 +28,24 @@
 @class NSManagedObjectContext;
 
 /**
- @author Konstantin Zinovyev
-
- Factory provide methods for creating all RamblerSpotlight's components
+ Factory provides methods for creating all RamblerSpotlight's components
  */
 @interface SpotlightAssembly : NSObject
 
 /**
- @author Konstantin Zinovyev
-
  Create IndexerMonitor object
  
- @param objects         Array which contains SpotlightEntitiesObjects
+ @param objects         Array which contains SpotlightEntityObjects
  @param contextStorage  A storage which contains NSManagedObjectContexts
  @param searchableIndex CSSearchableIndex's object
 
  @return IndexerMonitor
  */
-- (id<ChangeProviderDelegate>)indexerMonitorWithEntitiesObjects:(NSArray *)objects
-                                       contextStorage:(id<ContextProvider, ContextFiller>)contextStorage
-                                      searchableIndex:(CSSearchableIndex *)searchableIndex;
+- (id<ChangeProviderDelegate>)indexerMonitorWithEntityObjects:(NSArray *)objects
+                                               contextStorage:(id<ContextProvider, ContextFiller>)contextStorage
+                                              searchableIndex:(CSSearchableIndex *)searchableIndex;
 
 /**
- @author Konstantin Zinovyev
-
  Create SpotlightCoreDataStackCoordinator object
  
  @param contextFiller A storage which contains NSManagedObjectContexts
@@ -61,8 +55,6 @@
 - (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(id<ContextProvider, ContextFiller>)contextStorage;
 
 /**
- @author Konstantin Zinovyev
-
  Create ContextStorage object
  
  @param appContext Context that used in application

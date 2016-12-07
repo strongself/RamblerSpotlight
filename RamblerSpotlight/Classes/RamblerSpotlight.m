@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -38,18 +38,18 @@
 
 @implementation RamblerSpotlight
 
-- (void)setupSpotlightWithSpotlightEntitiesObjects:(NSArray *)entitiesObjects
-                                                appContext:(NSManagedObjectContext *)appContext
-                                           searchableIndex:(CSSearchableIndex *)searchableIndex {
+- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray *)entityObjects
+                                      appContext:(NSManagedObjectContext *)appContext
+                                 searchableIndex:(CSSearchableIndex *)searchableIndex {
     SpotlightAssembly *spotlightFactory = [SpotlightAssembly new];
     
     ContextStorageImplementation *contextStorage = [spotlightFactory contextStorageWithAppContext:appContext];
     id<SpotlightCoreDataStackCoordinator> coordinator = [spotlightFactory spotlightCoreDataStackCoordinatorWithContextStorage:contextStorage];
     [coordinator setupCoreDataStack];
     
-    IndexerMonitor *indexerMonitor = [spotlightFactory indexerMonitorWithEntitiesObjects:entitiesObjects
-                                                                          contextStorage:contextStorage
-                                                                         searchableIndex:searchableIndex];
+    IndexerMonitor *indexerMonitor = [spotlightFactory indexerMonitorWithEntityObjects:entityObjects
+                                                                        contextStorage:contextStorage
+                                                                       searchableIndex:searchableIndex];
     self.indexerMonitor = indexerMonitor;
     self.spotlightCoreDataStackCoordinator = coordinator;
 }

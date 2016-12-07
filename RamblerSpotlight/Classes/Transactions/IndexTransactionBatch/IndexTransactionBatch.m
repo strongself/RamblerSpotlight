@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -22,11 +22,11 @@
 
 @interface IndexTransactionBatch ()
 
-@property (nonatomic, strong, readwrite) NSOrderedSet *insertIdentifiers;
-@property (nonatomic, strong, readwrite) NSOrderedSet *updateIdentifiers;
-@property (nonatomic, strong, readwrite) NSOrderedSet *deleteIdentifiers;
-@property (nonatomic, strong, readwrite) NSOrderedSet *moveIdentifiers;
-@property (nonatomic, strong, readwrite) NSString *objectType;
+@property (nonatomic, copy, readwrite) NSOrderedSet *insertIdentifiers;
+@property (nonatomic, copy, readwrite) NSOrderedSet *updateIdentifiers;
+@property (nonatomic, copy, readwrite) NSOrderedSet *deleteIdentifiers;
+@property (nonatomic, copy, readwrite) NSOrderedSet *moveIdentifiers;
+@property (nonatomic, copy, readwrite) NSString *objectType;
 
 @end
 
@@ -65,10 +65,10 @@
 #pragma mark - Public methods
 
 - (BOOL)isEmpty {
-    return self.insertIdentifiers.count == 0 &&
-        self.updateIdentifiers.count == 0 &&
-        self.deleteIdentifiers.count == 0 &&
-        self.moveIdentifiers.count == 0;
+    return self.insertIdentifiers.count == 0u &&
+        self.updateIdentifiers.count == 0u &&
+        self.deleteIdentifiers.count == 0u &&
+        self.moveIdentifiers.count == 0u;
 }
 
 @end

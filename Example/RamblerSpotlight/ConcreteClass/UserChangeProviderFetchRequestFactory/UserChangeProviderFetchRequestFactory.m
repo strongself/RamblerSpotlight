@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,9 +26,9 @@
 #pragma mark - <ChangeProviderFetchRequestFactory>
 
 - (NSFetchRequest *)obtainFetchRequestForIndexing {
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"User"];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:NSStringFromClass([User class])];
     
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"name"
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:NSStringFromSelector(@selector(name))
                                                                      ascending:YES];
     request.sortDescriptors = @[sortDescriptor];
     return request;

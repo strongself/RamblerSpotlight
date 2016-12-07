@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -63,7 +63,7 @@ static NSString *const RSDataModelName = @"SpotlightIndexer";
     id context = @"";
     
     //when
-    [self.coordinator setAppCoreDataContext:context];
+    [self.coordinator updateAppCoreDataContext:context];
     
     //then
     NSManagedObjectContext *resultContext = [self.mockContextStorage obtainAppContext];

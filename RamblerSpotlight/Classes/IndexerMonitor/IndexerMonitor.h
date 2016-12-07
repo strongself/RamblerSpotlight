@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -28,8 +28,6 @@
 @class IndexerMonitorOperationQueueFactory;
 @class CSSearchableIndex;
 /**
- @author Egor Tolstoy
- 
  The main object in SpotlightIndexer ecosystem. It's responsible for chaining all the parts together.
  */
 @interface IndexerMonitor : NSObject <ChangeProviderDelegate>
@@ -41,22 +39,16 @@
                     searchableIndex:(CSSearchableIndex *)searchableIndex;
 
 /**
- @author Egor Tolstoy
- 
  Initiates monitoring start
  */
 - (void)startMonitoring;
 
 /**
- @author Egor Tolstoy
- 
  Initiates monitoring end
  */
 - (void)stopMonitoring;
 
 /**
- @author Konstantin Zinovyev
- 
  Deletes all items from spotlight index
  */
 - (void)deleteAllDataFromSpotlight;

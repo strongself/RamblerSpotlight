@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,6 +21,9 @@
 #import "SpotlightCoreDataHandlerImplementation.h"
 #import <CoreData/CoreData.h>
 
+static NSUInteger const RSLFetchBatchSize = 20u;
+static NSUInteger const RSLFetchBatchLimit = 1u;
+
 @implementation SpotlightCoreDataHandlerImplementation
 
 #pragma mark - SpotlightCoreDataHandler
@@ -33,7 +36,7 @@
         NSError *error = nil;
         results = [context executeFetchRequest:request error:&error];
     }];
-    if ([results count] == 0) {
+    if ([results count] == 0u) {
         return nil;
     }
     return [results firstObject];
@@ -52,16 +55,16 @@
     if (searchTerm) {
         [request setPredicate:searchTerm];
     }
-    [request setFetchBatchSize:20];
+    [request setFetchBatchSize:RSLFetchBatchSize];
     
     NSMutableArray *sortDescriptors = [[NSMutableArray alloc] init];
     NSArray *sortKeys = [property componentsSeparatedByString:@","];
     for (__strong NSString *sortKey in sortKeys) {
         NSArray *sortComponents = [sortKey componentsSeparatedByString:@":"];
-        if (sortComponents.count > 1) {
+        if (sortComponents.count > 1u) {
             NSString *customAscending = sortComponents.lastObject;
             ascending = customAscending.boolValue;
-            sortKey = sortComponents[0];
+            sortKey = sortComponents[0u];
         }
         
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:ascending];
@@ -69,7 +72,7 @@
     }
     
     [request setSortDescriptors:sortDescriptors];
-    [request setFetchLimit:1];
+    [request setFetchLimit:RSLFetchBatchLimit];
     
     __block NSArray *results = nil;
     [context performBlockAndWait:^{
@@ -77,7 +80,7 @@
         results = [context executeFetchRequest:request error:&error];
     }];
     
-    if ([results count] == 0) {
+    if ([results count] == 0u) {
         return nil;
     }
     return [results firstObject];
@@ -93,7 +96,7 @@
                                               inManagedObjectContext:context];
     [request setEntity:entity];
     [request setPredicate:[NSPredicate predicateWithFormat:@"%K = %@", attribute, searchValue]];
-    [request setFetchLimit:1];
+    [request setFetchLimit:RSLFetchBatchLimit];
     
     __block NSArray *results = nil;
     [context performBlockAndWait:^{

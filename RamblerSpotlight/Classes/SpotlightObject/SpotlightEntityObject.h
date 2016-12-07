@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,27 +25,19 @@
 @protocol ObjectIndexer;
 
 /**
- @author Konstantin Zinovyev
- 
- Object contained all dependencies that need to index concrete app's entity
+ Object contains all dependencies that need to index concrete app's entity
  */
 @interface SpotlightEntityObject : NSObject
 
 /**
- @author Konstantin Zinovyev
- 
  Object responsible for transforming indexing object to identifier and backwards
  */
 @property (nonatomic, strong, readonly) id<ObjectTransformer> objectTransformer;
 /**
- @author Konstantin Zinovyev
- 
  Factory providing fetch requests for ChangeProvider
  */
 @property (nonatomic, strong, readonly) id<ChangeProviderFetchRequestFactory> requestFactory;
 /**
- @author Konstantin Zinovyev
- 
  Responsible for indexing data of specific class
  */
 @property (nonatomic, strong, readonly) id<ObjectIndexer> objectIndexer;

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -51,10 +51,10 @@
 
 #pragma mark - Tests
 
-- (void)testThatHandlerFindFirstWithCreateCorrect {
+- (void)testThatHandlerFindFirstWithCreatesCorrectly {
     //given
     NSString *entityName = NSStringFromClass([User class]);
-    NSString *attribute = @"name";
+    NSString *attribute = NSStringFromSelector(@selector(name));
     NSString *value = @"type";
     
     //when
@@ -68,10 +68,10 @@
     XCTAssertEqual(value, user.name);
 }
 
-- (void)testThatHandlerFindFirstWithoutCreateCorrect {
+- (void)testThatHandlerFindFirstWithoutCreatesCorrectly {
     //given
     NSString *entityName = NSStringFromClass([User class]);
-    NSString *attribute = @"name";
+    NSString *attribute = NSStringFromSelector(@selector(name));
     NSString *value = @"type";
     __block User *expectedUser = nil;
     [MagicalRecord saveWithBlockAndWait:^(NSManagedObjectContext *localContext) {
@@ -91,7 +91,7 @@
     XCTAssertEqual(expectedUser.name, resultUser.name);
 }
 
-- (void)testThatHandlerFindFirstCorrect {
+- (void)testThatHandlerFindFirstCorrectly {
     //given
     NSString *entityName = NSStringFromClass([User class]);
     NSString *value = @"type";
@@ -111,10 +111,10 @@
     XCTAssertEqual(expectedUser.name, resultUser.name);
 }
 
-- (void)testThatHandlerFindFirstWithPredicateCorrect {
+- (void)testThatHandlerFindFirstWithPredicateCorrectly {
     //given
     NSString *entityName = NSStringFromClass([User class]);
-    NSString *attribute = @"name";
+    NSString *attribute = NSStringFromSelector(@selector(name));
     NSString *value = @"type";
     __block User *expectedUser = nil;
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K == %@", attribute, value];

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,50 +21,36 @@
 #import <Foundation/Foundation.h>
 
 /**
- @author Egor Tolstoy
- 
  Model describes a set of changes. Has transactions for only one objectType.
  */
 @interface IndexTransactionBatch : NSObject
 
 /**
- @author Egor Tolstoy
- 
  Inserted objects identifiers
  */
 @property (nonatomic, strong, readonly) NSOrderedSet *insertIdentifiers;
 
 /**
- @author Egor Tolstoy
- 
  Updated objects identifiers
  */
 @property (nonatomic, strong, readonly) NSOrderedSet *updateIdentifiers;
 
 /**
- @author Egor Tolstoy
- 
  Deleted objects identifiers
  */
 @property (nonatomic, strong, readonly) NSOrderedSet *deleteIdentifiers;
 
 /**
- @author Egor Tolstoy
- 
  Moved objects identifiers
  */
 @property (nonatomic, strong, readonly) NSOrderedSet *moveIdentifiers;
 
 /**
- @author Egor Tolstoy
- 
  The single object type of the trasaction batch
  */
 @property (nonatomic, strong, readonly) NSString *objectType;
 
 /**
- @author Egor Tolstoy
- 
  This method tells if the batch is empty. It checks all the identifiers sets.
  */
 @property (nonatomic, assign, readonly, getter=isEmpty) BOOL empty;

@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +23,8 @@
 
 @interface IndexerMonitor ()
 
-@property (nonatomic, strong) NSArray *indexers;
-@property (nonatomic, strong) NSArray *changeProviders;
+@property (nonatomic, copy) NSArray *indexers;
+@property (nonatomic, copy) NSArray *changeProviders;
 @property (nonatomic, strong) IndexerStateStorage *stateStorage;
 @property (nonatomic, strong) IndexerMonitorOperationQueueFactory *queueFactory;
 @property (nonatomic, strong) CSSearchableIndex *searchableIndex;

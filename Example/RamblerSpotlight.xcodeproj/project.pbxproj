@@ -80,7 +80,7 @@
 		666335CD1DAE3D2A0038C39D /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		666335CE1DAE3D2A0038C39D /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		666335D01DAE3D2A0038C39D /* DataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataBase.xcdatamodel; sourceTree = "<group>"; };
-		666335D11DAE3D2A0038C39D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		666335D11DAE3D2A0038C39D /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = DetailViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		666335D21DAE3D2A0038C39D /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		666335D61DAE3D440038C39D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		66D04EE11DAFA2100083AAE8 /* XCTestCase+RCFHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+RCFHelpers.h"; sourceTree = "<group>"; };
@@ -505,6 +505,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = k.zinovyev;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = UM246WFXVS;
+					};
 					6003F5AD195388D20070C39A = {
 						ProvisioningStyle = Manual;
 						TestTargetID = 6003F589195388D20070C39A;
@@ -796,7 +799,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UM246WFXVS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RamblerSpotlight/RamblerSpotlight-Prefix.pch";
 				INFOPLIST_FILE = "RamblerSpotlight/RamblerSpotlight-Info.plist";
@@ -817,7 +820,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = UM246WFXVS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RamblerSpotlight/RamblerSpotlight-Prefix.pch";
 				INFOPLIST_FILE = "RamblerSpotlight/RamblerSpotlight-Info.plist";

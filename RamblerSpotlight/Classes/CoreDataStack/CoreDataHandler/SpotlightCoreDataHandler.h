@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,8 @@
 @protocol SpotlightCoreDataHandler <NSObject>
 
 /**
- @author Konstantin Zinovyev
-
  Find first object for concrete entity in context
+ 
  @param entityName Name entity
  @param inContext    App context
 
@@ -39,9 +38,8 @@
                     inContext:(NSManagedObjectContext *)context;
 
 /**
- @author Konstantin Zinovyev
- 
  Find first object for concrete entity in context
+ 
  @param entityName Name entity
  @param attribute Name attribute
  @param withValue Value attribute
@@ -55,9 +53,8 @@
                             inContext:(NSManagedObjectContext *)context;
 
 /**
- @author Konstantin Zinovyev
- 
  Find first object by predicate for concrete entity in context
+ 
  @param predicate predicate for request
  @param entityName Name entity
  @param sortedBy Name attribute for sorted

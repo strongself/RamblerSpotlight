@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -36,9 +36,9 @@
 
 #pragma mark - IndexMonitor
 
-- (IndexerMonitor *)indexerMonitorWithEntitiesObjects:(NSArray *)objects
-                                       contextStorage:(ContextStorageImplementation *)contextStorage
-                                      searchableIndex:(CSSearchableIndex *)searchableIndex {
+- (IndexerMonitor *)indexerMonitorWithEntityObjects:(NSArray *)objects
+                                     contextStorage:(ContextStorageImplementation *)contextStorage
+                                    searchableIndex:(CSSearchableIndex *)searchableIndex {
     
     NSArray<ChangeProvider> *providers = [self providersFromSpotlightEntititesObjects:objects
                                                                        contextStorage:contextStorage];
@@ -49,8 +49,8 @@
     IndexerStateStorage *indexerStateStorage = [IndexerStateStorage stateStorageWithContextProvider:contextStorage
                                                                                     coreDataHandler:spotlightCoreDataHandler];
     
-    IndexerMonitor *indexerMonitor = [IndexerMonitor monitorWithIndexers:[indexers copy]
-                                                         changeProviders:[providers copy]
+    IndexerMonitor *indexerMonitor = [IndexerMonitor monitorWithIndexers:indexers
+                                                         changeProviders:providers
                                                             stateStorage:indexerStateStorage
                                                             queueFactory:indexerMonitorOperationQueueFactory
                                                          searchableIndex:searchableIndex];

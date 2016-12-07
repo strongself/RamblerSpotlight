@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,8 @@
 @interface RamblerSpotlightTests : XCTestCase
 
 @property (nonatomic, strong) RamblerSpotlight *ramblerSpotlight;
-
+@property (nonatomic, strong) id mockIndexerMonitor;
+    
 @end
 
 @implementation RamblerSpotlightTests
@@ -37,46 +38,47 @@
 - (void)setUp {
     [super setUp];
     
+    id mockIndexerMonitor = OCMClassMock([IndexerMonitor class]);
+    
     self.ramblerSpotlight = [[RamblerSpotlight alloc] init];
+    self.ramblerSpotlight.indexerMonitor = mockIndexerMonitor;
+    
 }
 
 - (void)tearDown {
     self.ramblerSpotlight = nil;
+    
+    self.mockIndexerMonitor = nil;
+    [self.mockIndexerMonitor stopMocking];
     
     [super tearDown];
 }
 
 #pragma mark - Tests
 
-- (void)testThatSpotlightStartMonitoringCorrect {
+- (void)testThatSpotlightStartsMonitoringCorrectly {
     //given
-    id mockIndexerMonitor = OCMClassMock([IndexerMonitor class]);
-    self.ramblerSpotlight.indexerMonitor = mockIndexerMonitor;
     
     //when
     [self.ramblerSpotlight startMonitoring];
     
     //then
-    OCMVerify([mockIndexerMonitor startMonitoring]);
+    OCMVerify([self.mockIndexerMonitor startMonitoring]);
 }
 
-- (void)testThatSpotlightStopMonitoringCorrect {
+- (void)testThatSpotlightStopsMonitoringCorrectly {
     //given
-    id mockIndexerMonitor = OCMClassMock([IndexerMonitor class]);
-    self.ramblerSpotlight.indexerMonitor = mockIndexerMonitor;
-    
+
     //when
     [self.ramblerSpotlight stopMonitoring];
     
     //then
-    OCMVerify([mockIndexerMonitor stopMonitoring]);
+    OCMVerify([self.mockIndexerMonitor stopMonitoring]);
 }
 
-- (void)testThatSpotlightDeleteDatabaseCorrect {
+- (void)testThatSpotlightDeleteDatabaseCorrectly {
     //given
-    id mockIndexerMonitor = OCMClassMock([IndexerMonitor class]);
-    self.ramblerSpotlight.indexerMonitor = mockIndexerMonitor;
-    
+
     id mockCoordinator = OCMProtocolMock(@protocol(SpotlightCoreDataStackCoordinator));
     self.ramblerSpotlight.spotlightCoreDataStackCoordinator = mockCoordinator;
     
@@ -84,13 +86,13 @@
     [self.ramblerSpotlight deleteSpotlightDatabase];
     
     //then
-    OCMVerify([mockIndexerMonitor stopMonitoring]);
-    OCMVerify([mockIndexerMonitor deleteAllDataFromSpotlight]);
+    OCMVerify([self.mockIndexerMonitor stopMonitoring]);
+    OCMVerify([self.mockIndexerMonitor deleteAllDataFromSpotlight]);
     OCMVerify([mockCoordinator clearDatabaseFilesSpotlight]);
     XCTAssertNil(self.ramblerSpotlight.indexerMonitor);
 }
 
-- (void)testThatSpotlightSetupCorrect {
+- (void)testThatSpotlightSetupsCorrectly {
     //given
     
     //when

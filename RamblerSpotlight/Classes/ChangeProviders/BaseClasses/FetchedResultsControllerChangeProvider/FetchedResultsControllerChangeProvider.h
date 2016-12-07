@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,6 @@
 @protocol ContextProvider;
 
 /**
- @author Egor Tolstoy
- 
  Default change provider build upon NSFetchedResultsController
  */
 @interface FetchedResultsControllerChangeProvider : NSObject <ChangeProvider>

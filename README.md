@@ -12,7 +12,7 @@
 
 - Provides all the infrastructure for using dynamic objects in Spotlight
 - Keeps Spotlight data up to date
-- Saves data that need index later
+- Saves data that needs index later
 - Battle-tested into several *Rambler&Co* projects.
 
 ## Installation
@@ -25,9 +25,7 @@ Development target: ios 9.0 or later
 
 For full information clone the example project
 
-Before using read our article:
-
-https://habrahabr.ru/company/rambler-co/blog/268257/
+Before using read [our article on Habrahabr.ru](https://habrahabr.ru/company/rambler-co/blog/268257/)
 
  1. Create SpotlightEntityObject for your entity.
 
@@ -44,7 +42,7 @@ You need to create next classes:
 ...
 `
 
-Aftet that create SpotlightEntityObject:
+After that create SpotlightEntityObject:
 
 `
 SpotlightEntityObject *spotlightEntity = [SpotlightEntityObject entityObjectWithObjectTransformer:objectTransformer
@@ -61,8 +59,8 @@ RamblerSpotlight *ramblerSpotlight = [[RamblerSpotlight alloc] init];
  3. Setup RamblerSpotlight with entities, your app's context and CSSearchableIndex
 
 `
-NSArray<SpotlightEntitieObject> *entitiesObjects = @[...];
-NSManagedObjectContext *context = [MagicalRecord MR_defaultContext];
+NSArray<SpotlightEntityObject *> *entitiesObjects = @[...];
+NSManagedObjectContext *context ... ;
 CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
 
 [ramblerSpotlight setupSpotlightWithSpotlightEntitiesObjects:entitiesObjects
@@ -78,11 +76,11 @@ CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
 
 ## Author
 
-k.zinovyev, k.zinovyev@rambler-co.ru
+- Konstantin Zinovyev, k.zinovyev@rambler-co.ru
 
-e.tolstoy, e.tolstoy@rambler-co.ru
+- Egor Tolstoy, e.tolstoy@rambler-co.ru
 
-v.smal, v.smal@rambler-co.ru
+- Vadim Smal, v.smal@rambler-co.ru
 
 ## Links
 

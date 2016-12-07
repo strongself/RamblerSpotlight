@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,8 +25,6 @@
 typedef void(^ChangeProviderInitialIndexingBlock)(NSString *objectType, NSString *objectIdentifier);
 
 /**
- @author Egor Tolstoy
- 
  This protocol describes an object responsible for provading information about indexed objects changes.
  */
 @protocol ChangeProvider <NSObject>
@@ -34,22 +32,16 @@ typedef void(^ChangeProviderInitialIndexingBlock)(NSString *objectType, NSString
 @property (nonatomic, weak) id<ChangeProviderDelegate> delegate;
 
 /**
- @author Egor Tolstoy
- 
  Method initiates monitoring start
  */
 - (void)startMonitoring;
 
 /**
- @author Egor Tolstoy
- 
  Method initiates monitoring end
  */
 - (void)stopMonitoring;
 
 /**
- @author Egor Tolstoy
- 
  Method allows to perform processing initial objects fetched by change provider
  
  @param block Processing block

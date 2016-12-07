@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -57,7 +57,7 @@
 
 #pragma mark - Tests
 
-- (void)testThatAssemblyCreateContextStorageCorrect {
+- (void)testThatAssemblyCreatesContextStorageCorrectly {
     //given
     id context = @"";
     
@@ -69,7 +69,7 @@
     XCTAssertEqual(result.appContext, context);
 }
 
-- (void)testThatAssemblyCreateCoreDataStackCorrect {
+- (void)testThatAssemblyCreatesCoreDataStackCorrectle {
     //given
     id contextStorage = @"";
     
@@ -81,9 +81,9 @@
     XCTAssertEqual(result.contextStorage, contextStorage);
 }
 
-- (void)testThatAssemblyCreateIndexerMonitorCorrect {
+- (void)testThatAssemblyCreatesIndexerMonitorCorrectly {
     //given
-    NSUInteger countEntities = 5;
+    NSUInteger countEntities = 5u;
     NSArray *entities = [self createSpotlightEntitiesObjectWothCount:countEntities];
     id mockContextStorage = OCMClassMock([ContextStorageImplementation class]);
     id mockSearchableIndex = OCMClassMock([CSSearchableIndex class]);
@@ -108,7 +108,7 @@
 
 - (NSArray *)createSpotlightEntitiesObjectWothCount:(NSUInteger)count {
     NSMutableArray *entities = [NSMutableArray new];
-    for (int i = 0; i < count; ++i) {
+    for (NSUInteger i = 0; i < count; ++i) {
         SpotlightEntityObject *entity = [SpotlightEntityObject entityObjectWithObjectTransformer:nil
                                                                                   requestFactory:nil
                                                                                    objectIndexer:[ObjectIndexerBase new]];

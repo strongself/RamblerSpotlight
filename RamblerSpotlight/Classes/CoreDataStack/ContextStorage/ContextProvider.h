@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,15 +23,11 @@
 @class NSManagedObjectContext;
 
 /**
- @author Egor Tolstoy
- 
  Object is responsible for storing CoreData contexts for SpotlightIndexer own purposes
  */
 @protocol ContextProvider <NSObject>
 
 /**
- @author Egor Tolstoy
- 
  Returns a CoreData context for all of SpotlightIndexer actions
  
  @return NSManagedObjectContext
@@ -39,8 +35,6 @@
 - (NSManagedObjectContext *)obtainSpotlightPrimaryContext;
     
 /**
- @author Konstantin Zinovyev
- 
  Returns a CoreData context that used in app
  
  @return NSManagedObjectContext

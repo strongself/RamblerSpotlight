@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,8 +23,6 @@
 #import "ChangeProviderChangeType.h"
 
 /**
- @author Egor Tolstoy
- 
  Model describes a single change in the database
  */
 @interface IndexTransaction : NSObject
@@ -34,24 +32,18 @@
                                changeType:(NSUInteger)changeType;
 
 /**
- @author Egor Tolstoy
- 
  Changed object identifier
  */
-@property (strong, nonatomic, readonly) NSString *identifier;
+@property (nonatomic, strong, readonly) NSString *identifier;
 
 /**
- @author Egor Tolstoy
- 
  Changed object type
  */
-@property (strong, nonatomic, readonly) NSString *objectType;
+@property (nonatomic, strong, readonly) NSString *objectType;
 
 /**
- @author Egor Tolstoy
- 
  Object change type
  */
-@property (assign, nonatomic, readonly) ChangeProviderChangeType changeType;
+@property (nonatomic, assign, readonly) ChangeProviderChangeType changeType;
 
 @end

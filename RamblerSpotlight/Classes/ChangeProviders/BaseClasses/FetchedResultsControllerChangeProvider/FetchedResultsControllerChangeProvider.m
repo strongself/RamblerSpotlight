@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -84,7 +84,6 @@
     NSArray *objects = self.controller.fetchedObjects;
     
     for (NSManagedObject *object in objects) {
-        NSLog(@"%@",[object description]);
         NSString *objectType = NSStringFromClass([object class]);
         NSString *objectIdentifier = [self.transformer identifierForObject:object];
         
@@ -119,13 +118,13 @@
     static NSDictionary *mappingDictionary;
     if (!mappingDictionary) {
         mappingDictionary = @{
-                              @(NSFetchedResultsChangeInsert) : @(ChangeProviderChangeInsert),
-                              @(NSFetchedResultsChangeDelete) : @(ChangeProviderChangeDelete),
-                              @(NSFetchedResultsChangeMove) : @(ChangeProviderChangeMove),
-                              @(NSFetchedResultsChangeUpdate) : @(ChangeProviderChangeUpdate)
+                              @(NSFetchedResultsChangeInsert) : @(ChangeProviderChangeTypeInsert),
+                              @(NSFetchedResultsChangeDelete) : @(ChangeProviderChangeTypeDelete),
+                              @(NSFetchedResultsChangeMove) : @(ChangeProviderChangeTypeMove),
+                              @(NSFetchedResultsChangeUpdate) : @(ChangeProviderChangeTypeUpdate)
                               };
     }
-    return [mappingDictionary[@(type)] integerValue];
+    return [mappingDictionary[@(type)] unsignedIntegerValue];
 }
 
 @end

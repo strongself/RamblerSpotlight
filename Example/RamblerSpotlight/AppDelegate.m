@@ -1,10 +1,22 @@
+// Copyright (c) 2016 RAMBLER&Co
 //
-//  RSAppDelegate.m
-//  RamblerSpotlight
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
-//  Created by k.zinovyev on 10/12/2016.
-//  Copyright (c) 2016 k.zinovyev. All rights reserved.
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
 //
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
 
 #import "AppDelegate.h"
 #import "DetailViewController.h"
@@ -26,33 +38,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:bundle];
-    
-    UINavigationController *navigationController = (UINavigationController *)[storyboard instantiateInitialViewController];
-    self.window.rootViewController = navigationController;
-    [self.window makeKeyAndVisible];
-    
+    NSManagedObjectContext *context = self.persistentContainer.viewContext;
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
     MasterViewController *controller = (MasterViewController *)navigationController.topViewController;
-    controller.managedObjectContext = self.persistentContainer.viewContext;
+    controller.managedObjectContext = context;
     
-    
-    self.ramblerSpotlight = [[RamblerSpotlight alloc] init];
-    UserChangeProviderFetchRequestFactory *factory = [UserChangeProviderFetchRequestFactory new];
-    UserObjectIndexer *indexer = [UserObjectIndexer new];
-    UserObjectTransformer *transformer = [UserObjectTransformer new];
-    self.transformer = transformer;
-    transformer.context = controller.managedObjectContext;
-    SpotlightEntityObject *entity = [SpotlightEntityObject entityObjectWithObjectTransformer:transformer
-                                                                              requestFactory:factory
-                                                                               objectIndexer:indexer];
-    [self.ramblerSpotlight setupSpotlightWithSpotlightEntitiesObjects:@[entity]
-                                                           appContext:controller.managedObjectContext
-                                                      searchableIndex:[CSSearchableIndex defaultSearchableIndex]];
-    [self.ramblerSpotlight startMonitoring];
-    
+    [self setupRamblerSpotlightWithContext:context];
     
     return YES;
 }
@@ -84,49 +75,51 @@
     return NO;
 }
 
-#pragma mark - Core Data stack
+#pragma mark - Core Data
 
 @synthesize persistentContainer = _persistentContainer;
 
 - (NSPersistentContainer *)persistentContainer {
-    // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.
     @synchronized (self) {
         if (_persistentContainer == nil) {
             _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"DataBase"];
             [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription *storeDescription, NSError *error) {
                 if (error != nil) {
-                    // Replace this implementation with code to handle the error appropriately.
-                    // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                    
-                    /*
-                     Typical reasons for an error here include:
-                     * The parent directory does not exist, cannot be created, or disallows writing.
-                     * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                     * The device is out of space.
-                     * The store could not be migrated to the current model version.
-                     Check the error message to determine what the actual problem was.
-                     */
                     NSLog(@"Unresolved error %@, %@", error, error.userInfo);
                     abort();
                 }
             }];
         }
     }
-    
     return _persistentContainer;
 }
-
-#pragma mark - Core Data Saving support
 
 - (void)saveContext {
     NSManagedObjectContext *context = self.persistentContainer.viewContext;
     NSError *error = nil;
     if ([context hasChanges] && ![context save:&error]) {
-        // Replace this implementation with code to handle the error appropriately.
-        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
     }
 }
 
+#pragma mark - Private methods
+    
+- (void)setupRamblerSpotlightWithContext:(NSManagedObjectContext *)context {
+    self.ramblerSpotlight = [[RamblerSpotlight alloc] init];
+    UserChangeProviderFetchRequestFactory *factory = [UserChangeProviderFetchRequestFactory new];
+    UserObjectIndexer *indexer = [UserObjectIndexer new];
+    UserObjectTransformer *transformer = [UserObjectTransformer new];
+    
+    self.transformer = transformer;
+    transformer.context = context;
+    
+    SpotlightEntityObject *entity = [SpotlightEntityObject entityObjectWithObjectTransformer:transformer
+                                                                              requestFactory:factory
+                                                                               objectIndexer:indexer];
+    [self.ramblerSpotlight setupSpotlightWithSpotlightEntityObjects:@[entity]
+                                                         appContext:context
+                                                    searchableIndex:[CSSearchableIndex defaultSearchableIndex]];
+    [self.ramblerSpotlight startMonitoring];
+}
 @end

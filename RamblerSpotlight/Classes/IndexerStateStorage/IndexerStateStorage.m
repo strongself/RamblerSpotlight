@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,11 +26,11 @@
 #import "ContextProvider.h"
 #import "SpotlightCoreDataHandler.h"
 
-static NSUInteger const RSTransactionBatchSize = 1000;
-static NSUInteger const RSPositionInsertInBatch = 0;
-static NSUInteger const RSPositionUpdateInBatch = 1;
-static NSUInteger const RSPositionDeleteInBatch = 2;
-static NSUInteger const RSPositionMoveInBatch = 3;
+static NSUInteger const RSTransactionBatchSize = 1000u;
+static NSUInteger const RSPositionInsertInBatch = 0u;
+static NSUInteger const RSPositionUpdateInBatch = 1u;
+static NSUInteger const RSPositionDeleteInBatch = 2u;
+static NSUInteger const RSPositionMoveInBatch = 3u;
 
 @interface IndexerStateStorage ()
 
@@ -86,7 +86,7 @@ static NSUInteger const RSPositionMoveInBatch = 3;
                                                                               byAttribute:NSStringFromSelector(@selector(objectType))
                                                                                 withValue:objectType
                                                                                 inContext:context];
-                NSArray *identifiers = [transactions valueForKey:@"identifier"];
+                NSArray *identifiers = [transactions valueForKey:NSStringFromSelector(@selector(identifier))];
                 [state insertIdentifiers:identifiers
                                  forType:changeType];
                 state.lastChangeDate = [NSDate date];
@@ -98,7 +98,7 @@ static NSUInteger const RSPositionMoveInBatch = 3;
 
 - (IndexTransactionBatch *)obtainTransactionBatch {
     NSManagedObjectContext *context = [self.contextProvider obtainSpotlightPrimaryContext];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"numberOfIdentifiers > 0"];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"%K > 0", NSStringFromSelector(@selector(numberOfIdentifiers))];
     
     IndexState *state = [self.coreDataHandler findFirstWithPredicate:predicate
                                                           entityName:NSStringFromClass([IndexState class])
@@ -106,10 +106,10 @@ static NSUInteger const RSPositionMoveInBatch = 3;
                                                            ascending:YES
                                                            inContext:context];
     
-    if (state.insertIdentifiers.count == 0 &&
-        state.updateIdentifiers.count == 0 &&
-        state.deleteIdentifiers.count == 0 &&
-        state.moveIdentifiers.count == 0) {
+    if (state.insertIdentifiers.count == 0u &&
+        state.updateIdentifiers.count == 0u &&
+        state.deleteIdentifiers.count == 0u &&
+        state.moveIdentifiers.count == 0u) {
         return nil;
     }
     

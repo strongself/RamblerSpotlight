@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -28,8 +28,6 @@
 @protocol SpotlightCoreDataHandler;
 
 /**
- @author Egor Tolstoy
- 
  This object is responsible for saving pending changes to process them later.
  */
 @interface IndexerStateStorage : NSObject
@@ -38,8 +36,6 @@
                                 coreDataHandler:(id<SpotlightCoreDataHandler>)coreDataHandler;
 
 /**
- @author Egor Tolstoy
- 
  Method saves passed transaction to store
  
  @param transaction Index transaction
@@ -47,8 +43,6 @@
 - (void)insertTransaction:(IndexTransaction *)transaction;
 
 /**
- @author Egor Tolstoy
- 
  Method saves an array of transaction arrays to store
  
  @param transactionsArray NSArray<NSArray *> of transactions
@@ -58,8 +52,6 @@
                      changeType:(ChangeProviderChangeType)changeType;
 
 /**
- @author Egor Tolstoy
- 
  Method returns a transaction batch for indexing
  
  @return IndexTransactionBatch
@@ -67,8 +59,6 @@
 - (IndexTransactionBatch *)obtainTransactionBatch;
 
 /**
- @author Egor Tolstoy
- 
  Method removes transactions from the provided batch from the store
  
  @param batch Transaction batch
@@ -76,8 +66,6 @@
 - (void)removeProcessedBatch:(IndexTransactionBatch *)batch;
 
 /**
- @author Egor Tolstoy
- 
  Method checks whether indexing process ever started
  
  @return YES/NO

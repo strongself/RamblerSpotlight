@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -18,40 +18,25 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#ifndef Header_h
-#define Header_h
-
 /**
- @author Konstantin Zinovyev
- 
  Defines type of changes from Core Data.
  */
 typedef NS_ENUM(NSUInteger, ChangeProviderChangeType) {
     
-    /**
-     @author Konstantin Zinovyev
-     
+    /**   
      Inserted objects in Core Data
      */
-    ChangeProviderChangeInsert = 1,
-    /**
-     @author Konstantin Zinovyev
-     
+    ChangeProviderChangeTypeInsert = 1,
+    /**   
      Deleted objects in Core Data
      */
-    ChangeProviderChangeDelete = 2,
-    /**
-     @author Konstantin Zinovyev
-     
+    ChangeProviderChangeTypeDelete = 2,
+    /**   
      Moved objects in Core Data
      */
-    ChangeProviderChangeMove = 3,
-    /**
-     @author Konstantin Zinovyev
-     
+    ChangeProviderChangeTypeMove = 3,
+    /**   
      Updated objects in Core Data
      */
-    ChangeProviderChangeUpdate = 4
+    ChangeProviderChangeTypeUpdate = 4
 };
-
-#endif /* Header_h */

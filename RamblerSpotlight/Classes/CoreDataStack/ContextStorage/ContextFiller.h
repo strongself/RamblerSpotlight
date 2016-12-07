@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -23,15 +23,11 @@
 @class NSManagedObjectContext;
 
 /**
- @author Egor Tolstoy
- 
  Describes an object responsible for storing CoreData contexts during app lifecycle
  */
 @protocol ContextFiller <NSObject>
 
 /**
- @author Egor Tolstoy
- 
  This method retains a given context and stores it during the app lifecycle
  
  @param context NSManagedObjectContext
@@ -39,8 +35,6 @@
 - (void)setupSpotlightPrimaryContext:(NSManagedObjectContext *)context;
 
 /**
- @author Konstantin Zinovyev
- 
  This method retains a given context that used in app and stores it during the app lifecycle
  
  @param context NSManagedObjectContext

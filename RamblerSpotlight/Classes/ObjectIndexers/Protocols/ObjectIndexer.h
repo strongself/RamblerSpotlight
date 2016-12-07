@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -27,16 +27,12 @@
 typedef void(^IndexerErrorBlock)(NSError *error);
 
 /**
- @author Egor Tolstoy
- 
  Responsible for indexing data of specific class
  */
 @protocol ObjectIndexer <NSObject>
 
 
 /**
- @author Konstantin Zinovyev
- 
  Create operation by IndexBatch
 
  @param batch IndexBatch
@@ -48,9 +44,7 @@ typedef void(^IndexerErrorBlock)(NSError *error);
                     withCompletionBlock:(IndexerErrorBlock)block;
 
 /**
- @author Konstantin Zinovyev
- 
- Check that object can be index by this class
+ Check that object can be indexed by this class
  
  @param objectType Object's type
  
@@ -59,8 +53,6 @@ typedef void(^IndexerErrorBlock)(NSError *error);
 - (BOOL)canIndexObjectWithType:(NSString *)objectType;
 
 /**
- @author Egor Tolstoy
- 
  Returns a unique identifier for an indexing object. This identifier may look like MyCustomClass_12_1233
  
  @param object Object for indexing

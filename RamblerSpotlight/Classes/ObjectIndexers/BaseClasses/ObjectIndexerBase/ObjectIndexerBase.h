@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -37,8 +37,6 @@
 @property (nonatomic, strong) CSSearchableIndex *searchableIndex;
 
 /**
- @author Egor Tolstoy
- 
  This method should return a CSSearchableItem for a certain object.
  
  @param object An object for indexing
@@ -48,9 +46,7 @@
 - (CSSearchableItem *)searchableItemForObject:(id)object;
 
 /**
- @author Konstantin Zinovyev
- 
- Check that object can be index by this class
+ Check that object can be indexed by this class
  
  @param objectType Object's type
  

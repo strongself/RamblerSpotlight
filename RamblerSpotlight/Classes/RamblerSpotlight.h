@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -32,42 +32,32 @@
 @class NSManagedObjectContext;
 
 /**
- @author Konstantin Zinovyev
- 
  Main component
  */
 @interface RamblerSpotlight : NSObject
 
 /**
- @author Konstantin Zinovyev
-
- This method setup all of the component
+ This method setups all of the components
  
- @param entitiesObjects Array which contains SpotlightEntitiesObjects
+ @param entityObjects Array which contains SpotlightEntityObjects
  @param appContext      A storage which contains NSManagedObjectContexts
  @param searchableIndex CSSearchableIndex's object
  */
-- (void)setupSpotlightWithSpotlightEntitiesObjects:(NSArray *)entitiesObjects
+- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray *)entityObjects
                                         appContext:(NSManagedObjectContext *)appContext
                                    searchableIndex:(CSSearchableIndex *)searchableIndex;
 
 /**
- @author Konstantin Zinovyev
- 
- This method delete all of the component
+ This method deletes RamblerSpotlight's database
  */
 - (void)deleteSpotlightDatabase;
 
 /**
- @author Konstantin Zinovyev
- 
  Initiates monitoring start
  */
 - (void)startMonitoring;
 
 /**
- @author Konstantin Zinovyev
- 
  Initiates monitoring end
  */
 - (void)stopMonitoring;

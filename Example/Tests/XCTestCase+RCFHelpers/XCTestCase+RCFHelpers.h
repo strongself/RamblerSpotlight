@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,15 +25,11 @@
 typedef void (^ProxyBlock)(NSInvocation *);
 
 /**
- @author Egor Tolstoy
- 
  The category on the XCTestCase contains a number of helper methods to reduce the boilerplate code.
  */
 @interface XCTestCase (RCFHelpers)
 
 /**
- @author Egor Tolstoy
- 
  This method returns a XCTestEpectation object with an auto-generted description for the current test.
  
  @return Preconfigured XCTestExpectation
@@ -41,8 +37,6 @@ typedef void (^ProxyBlock)(NSInvocation *);
 - (XCTestExpectation *)expectationForCurrentTest;
 
 /**
- @author Egor Tolstoy
- 
  This method calls the fulfill method for the given expectation in the main thread.
  
  @param expectation XCTestExpectation for the current test
@@ -50,15 +44,11 @@ typedef void (^ProxyBlock)(NSInvocation *);
 - (void)fulfillExpectationInMainThread:(XCTestExpectation *)expectation;
 
 /**
- @author Egor Tolstoy
- 
  Method correctly setups CoreData stack for tests
  */
 - (SpotlightCoreDataStackCoordinatorImplementation *)setupCoreDataStackForTests;
 
 /**
- @author Egor Tolstoy
- 
  Method clears CoreData stack
  */
 - (void)tearDownCoreDataStackWithCoordinator:(SpotlightCoreDataStackCoordinatorImplementation *)coordinator;

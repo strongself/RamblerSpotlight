@@ -1,4 +1,4 @@
-// Copyright (c) 2015 RAMBLER&Co
+// Copyright (c) 2016 RAMBLER&Co
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -21,7 +21,7 @@
 #import "IndexerMonitorOperationQueueFactory.h"
 
 static NSString *const RSIndexerMonitorOperationQueueName = @"ru.rambler.Conferences.IndexerMonitorOperationQueue";
-static NSUInteger const RSMaxConcurrentOperationCount = 1;
+static NSUInteger const RSMaxConcurrentOperationCount = 1u;
 
 @implementation IndexerMonitorOperationQueueFactory
 
