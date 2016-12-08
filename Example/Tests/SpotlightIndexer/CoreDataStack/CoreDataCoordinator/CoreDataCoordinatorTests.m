@@ -30,6 +30,7 @@ static NSString *const RSDataModelName = @"SpotlightIndexer";
 
 @property (nonatomic, strong) SpotlightCoreDataStackCoordinatorImplementation *coordinator;
 @property (nonatomic, strong) id mockContextStorage;
+@property (nonatomic, strong) id mockContext;
 
 @end
 
@@ -39,8 +40,8 @@ static NSString *const RSDataModelName = @"SpotlightIndexer";
 
 - (void)setUp {
     [super setUp];
-    
-    self.mockContextStorage = [[ContextStorageImplementation alloc] initWithAppContext:nil];
+    self.mockContext = OCMClassMock([NSManagedObjectContext class]);
+    self.mockContextStorage = [[ContextStorageImplementation alloc] initWithAppContext:self.mockContext];
     self.coordinator = [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:self.mockContextStorage
                                                                                           fileManager:[NSFileManager defaultManager]];
 }
@@ -49,6 +50,9 @@ static NSString *const RSDataModelName = @"SpotlightIndexer";
     if ([self isExistDataBase]) {
         [self.coordinator clearDatabaseFilesSpotlight];
     }
+    
+    [self.mockContext stopMocking];
+    self.mockContext = nil;
 
     self.mockContextStorage = nil;
     self.coordinator = nil;

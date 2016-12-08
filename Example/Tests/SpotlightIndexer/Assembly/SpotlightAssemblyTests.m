@@ -109,8 +109,10 @@
 - (NSArray *)createSpotlightEntitiesObjectWothCount:(NSUInteger)count {
     NSMutableArray *entities = [NSMutableArray new];
     for (NSUInteger i = 0; i < count; ++i) {
-        SpotlightEntityObject *entity = [SpotlightEntityObject entityObjectWithObjectTransformer:nil
-                                                                                  requestFactory:nil
+        id transformer = [NSObject new];
+        id factory = [NSObject new];
+        SpotlightEntityObject *entity = [SpotlightEntityObject entityObjectWithObjectTransformer:transformer
+                                                                                  requestFactory:factory
                                                                                    objectIndexer:[ObjectIndexerBase new]];
         [entities addObject:entity];
     }

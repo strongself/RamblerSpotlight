@@ -94,11 +94,14 @@
 
 - (void)testThatSpotlightSetupsCorrectly {
     //given
+    NSArray *objects = @[];
+    id appContext = [NSObject new];
+    id searchableIndex = [NSObject new];
     
     //when
-    [self.ramblerSpotlight setupSpotlightWithSpotlightEntityObjects:nil
-                                                         appContext:nil
-                                                    searchableIndex:nil];
+    [self.ramblerSpotlight setupSpotlightWithSpotlightEntityObjects:objects
+                                                         appContext:appContext
+                                                    searchableIndex:searchableIndex];
     
     //then
     XCTAssertTrue([self.ramblerSpotlight.indexerMonitor isMemberOfClass:[IndexerMonitor class]]);
