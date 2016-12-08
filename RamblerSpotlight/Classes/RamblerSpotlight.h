@@ -32,7 +32,7 @@
 @class NSManagedObjectContext;
 
 /**
- Main component
+ Main component is used for assembly all components, coupling classes and start indexing.
  */
 @interface RamblerSpotlight : NSObject
 
