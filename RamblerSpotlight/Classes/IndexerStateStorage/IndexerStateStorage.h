@@ -32,8 +32,8 @@
  */
 @interface IndexerStateStorage : NSObject
 
-+ (instancetype)stateStorageWithContextProvider:(nonnull id<ContextProvider>)contextProvider
-                                coreDataHandler:(nonnull id<SpotlightCoreDataHandler>)coreDataHandler;
++ (nullable instancetype)stateStorageWithContextProvider:(nonnull id<ContextProvider>)contextProvider
+                                         coreDataHandler:(nonnull id<SpotlightCoreDataHandler>)coreDataHandler;
 
 /**
  Method saves passed transaction to store
@@ -56,7 +56,7 @@
  
  @return IndexTransactionBatch
  */
-- (IndexTransactionBatch *)obtainTransactionBatch;
+- (nullable IndexTransactionBatch *)obtainTransactionBatch;
 
 /**
  Method removes transactions from the provided batch from the store

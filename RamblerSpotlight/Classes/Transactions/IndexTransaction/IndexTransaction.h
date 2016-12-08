@@ -27,19 +27,19 @@
  */
 @interface IndexTransaction : NSObject
 
-+ (instancetype)transactionWithIdentifier:(nonnull NSString *)identifier
-                               objectType:(nonnull NSString *)objectType
-                               changeType:(NSUInteger)changeType;
++ (nullable instancetype)transactionWithIdentifier:(nonnull NSString *)identifier
+                                        objectType:(nonnull NSString *)objectType
+                                        changeType:(NSUInteger)changeType;
 
 /**
  Changed object identifier
  */
-@property (nonatomic, strong, readonly) NSString *identifier;
+@property (nonatomic, strong, readonly, nonnull) NSString *identifier;
 
 /**
  Changed object type
  */
-@property (nonatomic, strong, readonly) NSString *objectType;
+@property (nonatomic, strong, readonly, nonnull) NSString *objectType;
 
 /**
  Object change type

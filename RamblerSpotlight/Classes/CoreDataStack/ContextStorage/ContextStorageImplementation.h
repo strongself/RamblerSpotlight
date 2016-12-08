@@ -28,6 +28,6 @@
  */
 @interface ContextStorageImplementation : NSObject <ContextProvider, ContextFiller>
 
-- (instancetype)initWithAppContext:(nonnull NSManagedObjectContext *)appContext;
+- (nullable instancetype)initWithAppContext:(nonnull NSManagedObjectContext *)appContext;
 
 @end

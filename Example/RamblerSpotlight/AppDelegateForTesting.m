@@ -22,4 +22,10 @@
 
 @implementation AppDelegateForTesting
 
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window.rootViewController = [UIViewController new];
+    [self.window makeKeyAndVisible];
+    return YES;
+}
+    
 @end

@@ -28,37 +28,37 @@
 /**
  Inserted objects identifiers
  */
-@property (nonatomic, strong, readonly) NSOrderedSet *insertIdentifiers;
+@property (nonatomic, strong, readonly, nullable) NSOrderedSet *insertIdentifiers;
 
 /**
  Updated objects identifiers
  */
-@property (nonatomic, strong, readonly) NSOrderedSet *updateIdentifiers;
+@property (nonatomic, strong, readonly, nullable) NSOrderedSet *updateIdentifiers;
 
 /**
  Deleted objects identifiers
  */
-@property (nonatomic, strong, readonly) NSOrderedSet *deleteIdentifiers;
+@property (nonatomic, strong, readonly, nullable) NSOrderedSet *deleteIdentifiers;
 
 /**
  Moved objects identifiers
  */
-@property (nonatomic, strong, readonly) NSOrderedSet *moveIdentifiers;
+@property (nonatomic, strong, readonly, nullable) NSOrderedSet *moveIdentifiers;
 
 /**
  The single object type of the trasaction batch
  */
-@property (nonatomic, strong, readonly) NSString *objectType;
+@property (nonatomic, strong, readonly, nonnull) NSString *objectType;
 
 /**
  This method tells if the batch is empty. It checks all the identifiers sets.
  */
 @property (nonatomic, assign, readonly, getter=isEmpty) BOOL empty;
 
-+ (instancetype)batchWithObjectType:(nonnull NSString *)objectType
-                  insertIdentifiers:(nullable NSOrderedSet *)insertIdentifiers
-                  updateIdentifiers:(nullable NSOrderedSet *)updateIdentifiers
-                  deleteIdentifiers:(nullable NSOrderedSet *)deleteIdentifiers
-                    moveIdentifiers:(nullable NSOrderedSet *)moveIdentifiers;
++ (nullable instancetype)batchWithObjectType:(nonnull NSString *)objectType
+                           insertIdentifiers:(nullable NSOrderedSet *)insertIdentifiers
+                           updateIdentifiers:(nullable NSOrderedSet *)updateIdentifiers
+                           deleteIdentifiers:(nullable NSOrderedSet *)deleteIdentifiers
+                             moveIdentifiers:(nullable NSOrderedSet *)moveIdentifiers;
 
 @end

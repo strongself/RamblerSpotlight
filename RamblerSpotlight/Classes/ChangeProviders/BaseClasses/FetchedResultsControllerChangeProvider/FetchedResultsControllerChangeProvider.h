@@ -31,8 +31,8 @@
  */
 @interface FetchedResultsControllerChangeProvider : NSObject <ChangeProvider>
 
-+ (instancetype)changeProviderWithFetchRequestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
-                                    objectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
-                                      contextProvider:(nonnull id<ContextProvider>)contextProvider;
++ (nullable instancetype)changeProviderWithFetchRequestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
+                                             objectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                                               contextProvider:(nonnull id<ContextProvider>)contextProvider;
 
 @end

@@ -32,11 +32,11 @@
  */
 @interface IndexerMonitor : NSObject <ChangeProviderDelegate>
 
-+ (instancetype)monitorWithIndexers:(nonnull NSArray <id<ObjectIndexer>> *)indexers
-                    changeProviders:(nonnull NSArray <id<ChangeProvider>> *)changeProviders
-                       stateStorage:(nonnull IndexerStateStorage *)stateStorage
-                       queueFactory:(nonnull IndexerMonitorOperationQueueFactory *)queueFactory
-                    searchableIndex:(nonnull CSSearchableIndex *)searchableIndex;
++ (nullable instancetype)monitorWithIndexers:(nonnull NSArray <id<ObjectIndexer>> *)indexers
+                             changeProviders:(nonnull NSArray <id<ChangeProvider>> *)changeProviders
+                                stateStorage:(nonnull IndexerStateStorage *)stateStorage
+                                queueFactory:(nonnull IndexerMonitorOperationQueueFactory *)queueFactory
+                             searchableIndex:(nonnull CSSearchableIndex *)searchableIndex;
 
 /**
  Initiates monitoring start

@@ -32,17 +32,17 @@
 /**
  Object responsible for transforming indexing object to identifier and backwards
  */
-@property (nonatomic, strong, readonly) id<ObjectTransformer> objectTransformer;
+@property (nonatomic, strong, readonly, nonnull) id<ObjectTransformer> objectTransformer;
 /**
  Factory providing fetch requests for ChangeProvider
  */
-@property (nonatomic, strong, readonly) id<ChangeProviderFetchRequestFactory> requestFactory;
+@property (nonatomic, strong, readonly, nonnull) id<ChangeProviderFetchRequestFactory> requestFactory;
 /**
  Responsible for indexing data of specific class
  */
-@property (nonatomic, strong, readonly) id<ObjectIndexer> objectIndexer;
+@property (nonatomic, strong, readonly, nonnull) id<ObjectIndexer> objectIndexer;
 
-+ (instancetype)entityObjectWithObjectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
-                                   requestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)requestFactory
-                                    objectIndexer:(nonnull id<ObjectIndexer>)objectIndexer;
++ (nullable instancetype)entityObjectWithObjectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                                            requestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)requestFactory
+                                             objectIndexer:(nonnull id<ObjectIndexer>)objectIndexer;
 @end

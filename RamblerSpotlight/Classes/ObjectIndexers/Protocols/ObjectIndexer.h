@@ -24,7 +24,7 @@
 @protocol ChangeProviderFetchRequestFactory;
 @protocol ObjectTransformer;
 
-typedef void(^IndexerErrorBlock)(NSError *error);
+typedef void(^IndexerErrorBlock)(NSError * _Nullable error);
 
 /**
  Responsible for indexing data of specific class
@@ -40,8 +40,8 @@ typedef void(^IndexerErrorBlock)(NSError *error);
 
  @return NSOperation
  */
-- (NSOperation *)operationForIndexBatch:(nonnull IndexTransactionBatch *)batch
-                    withCompletionBlock:(IndexerErrorBlock)block;
+- (nullable NSOperation *)operationForIndexBatch:(nonnull IndexTransactionBatch *)batch
+                             withCompletionBlock:(nonnull IndexerErrorBlock)block;
 
 /**
  Check that object can be indexed by this class
@@ -59,6 +59,6 @@ typedef void(^IndexerErrorBlock)(NSError *error);
  
  @return Unique object identifier
  */
-- (NSString *)identifierForObject:(nonnull id)object;
+- (nonnull NSString *)identifierForObject:(nonnull id)object;
 
 @end

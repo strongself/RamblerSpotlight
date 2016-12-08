@@ -33,8 +33,8 @@
  */
 @interface ObjectIndexerBase : NSObject <ObjectIndexer>
 
-@property (nonatomic, strong) id<ObjectTransformer> objectTransformer;
-@property (nonatomic, strong) CSSearchableIndex *searchableIndex;
+@property (nonatomic, strong, nonnull) id<ObjectTransformer> objectTransformer;
+@property (nonatomic, strong, nonnull) CSSearchableIndex *searchableIndex;
 
 /**
  This method should return a CSSearchableItem for a certain object.
@@ -43,7 +43,7 @@
  
  @return CSSearchableItem
  */
-- (CSSearchableItem *)searchableItemForObject:(nonnull id)object;
+- (nullable CSSearchableItem *)searchableItemForObject:(nonnull id)object;
 
 /**
  Check that object can be indexed by this class
