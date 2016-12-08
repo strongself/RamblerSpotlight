@@ -21,7 +21,8 @@
 #import <RamblerSpotlight/RamblerSpotlight.h>
 
 /**
- ObjectIndexer for User
+ The class is responsible for creating the searchable item for concrete User object.
+ Searchable item is used by CSSeachableIndex
  */
 @interface UserObjectIndexer : ObjectIndexerBase
 

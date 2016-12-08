@@ -22,7 +22,8 @@
 #import <RamblerSpotlight/RamblerSpotlight.h>
 
 /**
- FetchRequestFactory for User
+ The class is responsible for creating the request.
+ Request need to retrieve object from CoreData
  */
 @interface UserChangeProviderFetchRequestFactory : NSObject <ChangeProviderFetchRequestFactory>
 

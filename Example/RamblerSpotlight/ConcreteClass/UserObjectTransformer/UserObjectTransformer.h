@@ -25,7 +25,8 @@
 @class NSManagedObjectContext;
 
 /**
-An <ObjectTransformer> for User
+ The class is responsible for creating the identifier for concrete User object and back.
+ Every object in CSSearchableIndex need have unique identifier.
  */
 @interface UserObjectTransformer : NSObject <ObjectTransformer>
 
