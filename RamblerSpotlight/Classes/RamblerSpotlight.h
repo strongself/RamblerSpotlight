@@ -43,9 +43,9 @@
  @param appContext      A storage which contains NSManagedObjectContexts
  @param searchableIndex CSSearchableIndex's object
  */
-- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray<SpotlightEntityObject *> *)entityObjects
-                                        appContext:(NSManagedObjectContext *)appContext
-                                   searchableIndex:(CSSearchableIndex *)searchableIndex;
+- (void)setupSpotlightWithSpotlightEntityObjects:(nonnull NSArray<SpotlightEntityObject *> *)entityObjects
+                                      appContext:(nonnull NSManagedObjectContext *)appContext
+                                 searchableIndex:(nonnull CSSearchableIndex *)searchableIndex;
 
 /**
  This method deletes RamblerSpotlight's database

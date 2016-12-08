@@ -96,9 +96,9 @@
     //given
     
     //when
-    [self.ramblerSpotlight setupSpotlightWithSpotlightEntitiesObjects:nil
-                                                           appContext:nil
-                                                      searchableIndex:nil];
+    [self.ramblerSpotlight setupSpotlightWithSpotlightEntityObjects:nil
+                                                         appContext:nil
+                                                    searchableIndex:nil];
     
     //then
     XCTAssertTrue([self.ramblerSpotlight.indexerMonitor isMemberOfClass:[IndexerMonitor class]]);

@@ -34,11 +34,11 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithObjectType:(NSString *)objectType
-                 insertIdentifiers:(NSOrderedSet *)insertIdentifiers
-                 updateIdentifiers:(NSOrderedSet *)updateIdentifiers
-                 deleteIdentifiers:(NSOrderedSet *)deleteIdentifiers
-                   moveIdentifiers:(NSOrderedSet *)moveIdentifiers {
+- (instancetype)initWithObjectType:(nonnull NSString *)objectType
+                 insertIdentifiers:(nullable NSOrderedSet *)insertIdentifiers
+                 updateIdentifiers:(nullable NSOrderedSet *)updateIdentifiers
+                 deleteIdentifiers:(nullable NSOrderedSet *)deleteIdentifiers
+                   moveIdentifiers:(nullable NSOrderedSet *)moveIdentifiers {
     self = [super init];
     if (self) {
         _objectType = objectType;
@@ -50,11 +50,11 @@
     return self;
 }
 
-+ (instancetype)batchWithObjectType:(NSString *)objectType
-                  insertIdentifiers:(NSOrderedSet *)insertIdentifiers
-                  updateIdentifiers:(NSOrderedSet *)updateIdentifiers
-                  deleteIdentifiers:(NSOrderedSet *)deleteIdentifiers
-                    moveIdentifiers:(NSOrderedSet *)moveIdentifiers {
++ (instancetype)batchWithObjectType:(nonnull NSString *)objectType
+                  insertIdentifiers:(nullable NSOrderedSet *)insertIdentifiers
+                  updateIdentifiers:(nullable NSOrderedSet *)updateIdentifiers
+                  deleteIdentifiers:(nullable NSOrderedSet *)deleteIdentifiers
+                    moveIdentifiers:(nullable NSOrderedSet *)moveIdentifiers {
     return [[self alloc] initWithObjectType:objectType
                           insertIdentifiers:insertIdentifiers
                           updateIdentifiers:updateIdentifiers

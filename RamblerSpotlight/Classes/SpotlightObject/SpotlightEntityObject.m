@@ -31,9 +31,9 @@
 
 @implementation SpotlightEntityObject
 
-- (instancetype)initWithObjectTransformer:(id<ObjectTransformer>)objectTransformer
-                   requestFactory:(id<ChangeProviderFetchRequestFactory>)requestFactory
-                    objectIndexer:(id<ObjectIndexer>)objectIndexer {
+- (instancetype)initWithObjectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                   requestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)requestFactory
+                    objectIndexer:(nonnull id<ObjectIndexer>)objectIndexer {
     self = [super init];
     
     if (self) {
@@ -45,9 +45,9 @@
     return self;
 }
 
-+ (instancetype)entityObjectWithObjectTransformer:(id<ObjectTransformer>)objectTransformer
-                                   requestFactory:(id<ChangeProviderFetchRequestFactory>)requestFactory
-                                    objectIndexer:(id<ObjectIndexer>)objectIndexer {
++ (instancetype)entityObjectWithObjectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                                   requestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)requestFactory
+                                    objectIndexer:(nonnull id<ObjectIndexer>)objectIndexer {
     return [[self alloc] initWithObjectTransformer:objectTransformer
                                     requestFactory:requestFactory
                                      objectIndexer:objectIndexer];

@@ -40,7 +40,7 @@ typedef void(^IndexerErrorBlock)(NSError *error);
 
  @return NSOperation
  */
-- (NSOperation *)operationForIndexBatch:(IndexTransactionBatch *)batch
+- (NSOperation *)operationForIndexBatch:(nonnull IndexTransactionBatch *)batch
                     withCompletionBlock:(IndexerErrorBlock)block;
 
 /**
@@ -50,7 +50,7 @@ typedef void(^IndexerErrorBlock)(NSError *error);
  
  @return BOOL
  */
-- (BOOL)canIndexObjectWithType:(NSString *)objectType;
+- (BOOL)canIndexObjectWithType:(nonnull NSString *)objectType;
 
 /**
  Returns a unique identifier for an indexing object. This identifier may look like MyCustomClass_12_1233
@@ -59,6 +59,6 @@ typedef void(^IndexerErrorBlock)(NSError *error);
  
  @return Unique object identifier
  */
-- (NSString *)identifierForObject:(id)object;
+- (NSString *)identifierForObject:(nonnull id)object;
 
 @end

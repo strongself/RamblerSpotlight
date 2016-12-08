@@ -121,7 +121,7 @@
     // then
     OCMVerify([self.mockChangeProvider processObjectsForInitialIndexingWithBlock:OCMOCK_ANY]);
     OCMVerify([self.mockStateStorage insertTransactionsArray:OCMOCK_ANY
-                                                  changeType:ChangeProviderChangeInsert]);
+                                                  changeType:ChangeProviderChangeTypeInsert]);
 }
 
 - (void)testThatMonitorStopsMonitoring {
@@ -143,7 +143,7 @@
     
     // when
     [self.monitor changeProvider:self.mockChangeProvider
-            didGetChangeWithType:ChangeProviderChangeInsert
+            didGetChangeWithType:ChangeProviderChangeTypeInsert
                    forObjectType:RSTestObjectType
                 objectIdentifier:RSTestObjectIdentifier];
     

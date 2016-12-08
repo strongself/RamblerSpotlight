@@ -89,9 +89,9 @@
     id mockSearchableIndex = OCMClassMock([CSSearchableIndex class]);
     
     //when
-    IndexerMonitor *result = [self.assembly indexerMonitorWithEntitiesObjects:entities
-                                                               contextStorage:mockContextStorage
-                                                              searchableIndex:mockSearchableIndex];
+    IndexerMonitor *result = [self.assembly indexerMonitorWithEntityObjects:entities
+                                                             contextStorage:mockContextStorage
+                                                            searchableIndex:mockSearchableIndex];
     
     //then
     XCTAssertTrue([result isMemberOfClass:[IndexerMonitor class]]);

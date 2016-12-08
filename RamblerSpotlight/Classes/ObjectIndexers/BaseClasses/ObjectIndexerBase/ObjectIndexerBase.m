@@ -31,8 +31,8 @@
 
 #pragma mark - <ObjectIndexer>
 
-- (NSOperation *)operationForIndexBatch:(IndexTransactionBatch *)batch
-                    withCompletionBlock:(IndexerErrorBlock)block {
+- (NSOperation *)operationForIndexBatch:(nonnull IndexTransactionBatch *)batch
+                    withCompletionBlock:(nonnull IndexerErrorBlock)block {
     NSBlockOperation *operation = [NSBlockOperation blockOperationWithBlock:^{
         NSMutableArray *items = [NSMutableArray array];
         
@@ -70,19 +70,19 @@
     return operation;
 }
 
-- (NSString *)identifierForObject:(id)object {
+- (NSString *)identifierForObject:(nonnull id)object {
     return [self.objectTransformer identifierForObject:object];
 }
 
 #pragma mark - Abstract methods
 
-- (BOOL)canIndexObjectWithType:(NSString *)objectType {
+- (BOOL)canIndexObjectWithType:(nonnull NSString *)objectType {
     [NSException raise:NSInternalInconsistencyException
                 format:@"You should override this method in a custom subclass"];
     return NO;
 }
 
-- (CSSearchableItem *)searchableItemForObject:(id)object {
+- (CSSearchableItem *)searchableItemForObject:(nonnull id)object {
     [NSException raise:NSInternalInconsistencyException
                 format:@"You should override this method in a custom subclass"];
     return nil;

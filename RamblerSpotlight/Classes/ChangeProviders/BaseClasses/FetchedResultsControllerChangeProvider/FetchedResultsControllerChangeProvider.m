@@ -42,9 +42,9 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithFetchRequestFactory:(id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
-                          objectTransformer:(id<ObjectTransformer>)objectTransformer
-                            contextProvider:(id<ContextProvider>)contextProvider {
+- (instancetype)initWithFetchRequestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
+                          objectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                            contextProvider:(nonnull id<ContextProvider>)contextProvider {
     self = [super init];
     if (self) {
         _requestFactory = fetchRequestFactory;
@@ -54,9 +54,9 @@
     return self;
 }
 
-+ (instancetype)changeProviderWithFetchRequestFactory:(id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
-                                    objectTransformer:(id<ObjectTransformer>)objectTransformer
-                                      contextProvider:(id<ContextProvider>)contextProvider {
++ (instancetype)changeProviderWithFetchRequestFactory:(nonnull id<ChangeProviderFetchRequestFactory>)fetchRequestFactory
+                                    objectTransformer:(nonnull id<ObjectTransformer>)objectTransformer
+                                      contextProvider:(nonnull id<ContextProvider>)contextProvider {
     return [[self alloc] initWithFetchRequestFactory:fetchRequestFactory
                                    objectTransformer:objectTransformer
                                      contextProvider:contextProvider];

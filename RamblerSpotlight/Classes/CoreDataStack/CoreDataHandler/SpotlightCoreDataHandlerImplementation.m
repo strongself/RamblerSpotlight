@@ -28,8 +28,8 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
 
 #pragma mark - SpotlightCoreDataHandler
 
-- (id)findFirstWithEntityName:(NSString *)entityName
-                    inContext:(NSManagedObjectContext *)context {
+- (id)findFirstWithEntityName:(nonnull NSString *)entityName
+                    inContext:(nonnull NSManagedObjectContext *)context {
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:entityName];
     __block NSArray *results = nil;
     [context performBlockAndWait:^{
@@ -42,11 +42,11 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
     return [results firstObject];
 }
 
-- (id)findFirstWithPredicate:(NSPredicate *)searchTerm
-                  entityName:(NSString *)entityName
-                    sortedBy:(NSString *)property
+- (id)findFirstWithPredicate:(nonnull NSPredicate *)searchTerm
+                  entityName:(nonnull NSString *)entityName
+                    sortedBy:(nonnull NSString *)property
                    ascending:(BOOL)ascending
-                   inContext:(NSManagedObjectContext *)context {
+                   inContext:(nonnull NSManagedObjectContext *)context {
     
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
@@ -87,10 +87,10 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
 }
 
 
-- (id)findFirstOrCreateWithEntityName:(NSString *)entityName
-                          byAttribute:(NSString *)attribute
-                            withValue:(id)searchValue
-                            inContext:(NSManagedObjectContext *)context {
+- (id)findFirstOrCreateWithEntityName:(nonnull NSString *)entityName
+                          byAttribute:(nonnull NSString *)attribute
+                            withValue:(nonnull id)searchValue
+                            inContext:(nonnull NSManagedObjectContext *)context {
     NSFetchRequest *request = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
                                               inManagedObjectContext:context];

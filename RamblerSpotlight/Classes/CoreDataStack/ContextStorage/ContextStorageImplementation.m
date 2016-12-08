@@ -31,7 +31,7 @@
 
 @implementation ContextStorageImplementation
 
-- (instancetype)initWithAppContext:(NSManagedObjectContext *)appContext {
+- (instancetype)initWithAppContext:(nonnull NSManagedObjectContext *)appContext {
     self = [super init];
     if (self) {
         _appContext = appContext;
@@ -41,17 +41,17 @@
 
 #pragma mark - <ContextFiller>
 
-- (void)setupSpotlightPrimaryContext:(NSManagedObjectContext *)context
-                          appContext:(NSManagedObjectContext *)appContext {
+- (void)setupSpotlightPrimaryContext:(nonnull NSManagedObjectContext *)context
+                          appContext:(nonnull NSManagedObjectContext *)appContext {
     self.spotlightPrimaryContext = context;
     self.appContext = appContext;
 }
 
-- (void)setupSpotlightPrimaryContext:(NSManagedObjectContext *)context {
+- (void)setupSpotlightPrimaryContext:(nonnull NSManagedObjectContext *)context {
     self.spotlightPrimaryContext = context;
 }
     
-- (void)setupAppContext:(NSManagedObjectContext *)context {
+- (void)setupAppContext:(nonnull NSManagedObjectContext *)context {
     self.appContext = context;
 }
 

@@ -36,9 +36,9 @@
 
 #pragma mark - IndexMonitor
 
-- (IndexerMonitor *)indexerMonitorWithEntityObjects:(NSArray<SpotlightEntityObject *> *)objects
-                                     contextStorage:(ContextStorageImplementation *)contextStorage
-                                    searchableIndex:(CSSearchableIndex *)searchableIndex {
+- (IndexerMonitor *)indexerMonitorWithEntityObjects:(nonnull NSArray<SpotlightEntityObject *> *)objects
+                                     contextStorage:(nonnull ContextStorageImplementation *)contextStorage
+                                    searchableIndex:(nonnull CSSearchableIndex *)searchableIndex {
     
     NSArray<ChangeProvider> *providers = [self providersFromSpotlightEntititesObjects:objects
                                                                        contextStorage:contextStorage];
@@ -59,20 +59,20 @@
 
 #pragma mark - CoreData objects
 
-- (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(ContextStorageImplementation *)contextFiller {
+- (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(nonnull ContextStorageImplementation *)contextFiller {
     NSFileManager *fileManager = [self fileManager];
     return [SpotlightCoreDataStackCoordinatorImplementation coordinatorWithContextStorage:contextFiller
                                                                               fileManager:fileManager];
 }
 
-- (ContextStorageImplementation *)contextStorageWithAppContext:(NSManagedObjectContext *)appContext {
+- (ContextStorageImplementation *)contextStorageWithAppContext:(nonnull NSManagedObjectContext *)appContext {
     return [[ContextStorageImplementation alloc] initWithAppContext:appContext];
 }
 
 #pragma mark - Private
 
-- (NSArray<ChangeProvider> *)providersFromSpotlightEntititesObjects:(NSArray<SpotlightEntityObject *> *)objects
-                                                     contextStorage:(ContextStorageImplementation *)contextStorage {
+- (NSArray<ChangeProvider> *)providersFromSpotlightEntititesObjects:(nonnull NSArray<SpotlightEntityObject *> *)objects
+                                                     contextStorage:(nonnull ContextStorageImplementation *)contextStorage {
     NSMutableArray<ChangeProvider> *providers = [NSMutableArray<ChangeProvider> new];
     for (SpotlightEntityObject *object in objects) {
         id<ChangeProvider> provider =
@@ -84,8 +84,8 @@
     return [providers copy];
 }
 
-- (NSArray<ObjectIndexer> *)indexersFromSpotlightEntititesObjects:(NSArray<SpotlightEntityObject *> *)objects
-                                                  searchableIndex:(CSSearchableIndex *) searchableIndex{
+- (NSArray<ObjectIndexer> *)indexersFromSpotlightEntititesObjects:(nonnull NSArray<SpotlightEntityObject *> *)objects
+                                                  searchableIndex:(nonnull CSSearchableIndex *) searchableIndex{
     NSMutableArray<ObjectIndexer> *indexers = [NSMutableArray<ObjectIndexer> new];
     for (SpotlightEntityObject *object in objects) {
         ObjectIndexerBase *indexer = object.objectIndexer;

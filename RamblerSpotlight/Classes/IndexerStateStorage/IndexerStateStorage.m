@@ -43,8 +43,8 @@ static NSUInteger const RSPositionMoveInBatch = 3u;
 
 #pragma mark - Initialization
 
-- (instancetype)initWithContextProvider:(id<ContextProvider>)contextProvider
-                        coreDataHandler:(id<SpotlightCoreDataHandler>)coreDataHandler {
+- (instancetype)initWithContextProvider:(nonnull id<ContextProvider>)contextProvider
+                        coreDataHandler:(nonnull id<SpotlightCoreDataHandler>)coreDataHandler {
     self = [super init];
     if (self) {
         _contextProvider = contextProvider;
@@ -53,15 +53,15 @@ static NSUInteger const RSPositionMoveInBatch = 3u;
     return self;
 }
 
-+ (instancetype)stateStorageWithContextProvider:(id<ContextProvider>)contextProvider
-                                coreDataHandler:(id<SpotlightCoreDataHandler>)coreDataHandler;{
++ (instancetype)stateStorageWithContextProvider:(nonnull id<ContextProvider>)contextProvider
+                                coreDataHandler:(nonnull id<SpotlightCoreDataHandler>)coreDataHandler;{
     return [[self alloc] initWithContextProvider:contextProvider
                                  coreDataHandler:coreDataHandler];
 }
 
 #pragma mark - Public methods
 
-- (void)insertTransaction:(IndexTransaction *)transaction {
+- (void)insertTransaction:(nonnull IndexTransaction *)transaction {
     NSManagedObjectContext *context = [self.contextProvider obtainSpotlightPrimaryContext];
     [context performBlockAndWait:^{
         IndexState *state = [self.coreDataHandler findFirstOrCreateWithEntityName:NSStringFromClass([IndexState class])
@@ -75,7 +75,7 @@ static NSUInteger const RSPositionMoveInBatch = 3u;
     }];
 }
 
-- (void)insertTransactionsArray:(NSArray<NSArray *> *)transactionsArray
+- (void)insertTransactionsArray:(nonnull NSArray<NSArray *> *)transactionsArray
                      changeType:(ChangeProviderChangeType)changeType {
     NSManagedObjectContext *context = [self.contextProvider obtainSpotlightPrimaryContext];
     [context performBlockAndWait:^{
@@ -136,7 +136,7 @@ static NSUInteger const RSPositionMoveInBatch = 3u;
                                       moveIdentifiers:sliceSetsArray[RSPositionMoveInBatch]];
 }
 
-- (void)removeProcessedBatch:(IndexTransactionBatch *)batch {
+- (void)removeProcessedBatch:(nonnull IndexTransactionBatch *)batch {
     NSManagedObjectContext *context = [self.contextProvider obtainSpotlightPrimaryContext];
     [context performBlockAndWait:^{
         IndexState *state = [self.coreDataHandler findFirstOrCreateWithEntityName:NSStringFromClass([IndexState class])

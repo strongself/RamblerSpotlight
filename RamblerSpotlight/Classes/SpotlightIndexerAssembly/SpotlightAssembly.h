@@ -42,9 +42,9 @@
 
  @return IndexerMonitor
  */
-- (id<ChangeProviderDelegate>)indexerMonitorWithEntityObjects:(NSArray<SpotlightEntityObject *> *)objects
-                                               contextStorage:(id<ContextProvider, ContextFiller>)contextStorage
-                                              searchableIndex:(CSSearchableIndex *)searchableIndex;
+- (id<ChangeProviderDelegate>)indexerMonitorWithEntityObjects:(nonnull NSArray<SpotlightEntityObject *> *)objects
+                                               contextStorage:(nonnull id<ContextProvider, ContextFiller>)contextStorage
+                                              searchableIndex:(nonnull CSSearchableIndex *)searchableIndex;
 
 /**
  Create SpotlightCoreDataStackCoordinator object
@@ -53,7 +53,7 @@
 
  @return SpotlightCoreDataStackCoordinator
  */
-- (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(id<ContextProvider, ContextFiller>)contextStorage;
+- (id<SpotlightCoreDataStackCoordinator>)spotlightCoreDataStackCoordinatorWithContextStorage:(nonnull id<ContextProvider, ContextFiller>)contextStorage;
 
 /**
  Create ContextStorage object
@@ -62,6 +62,6 @@
 
  @return contextStorage
  */
-- (id<ContextProvider, ContextFiller>)contextStorageWithAppContext:(NSManagedObjectContext *)appContext;
+- (id<ContextProvider, ContextFiller>)contextStorageWithAppContext:(nonnull NSManagedObjectContext *)appContext;
 
 @end

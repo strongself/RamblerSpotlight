@@ -27,8 +27,8 @@
  */
 @interface IndexTransaction : NSObject
 
-+ (instancetype)transactionWithIdentifier:(NSString *)identifier
-                               objectType:(NSString *)objectType
++ (instancetype)transactionWithIdentifier:(nonnull NSString *)identifier
+                               objectType:(nonnull NSString *)objectType
                                changeType:(NSUInteger)changeType;
 
 /**

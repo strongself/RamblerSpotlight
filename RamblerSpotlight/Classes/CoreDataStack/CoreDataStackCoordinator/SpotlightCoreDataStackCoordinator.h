@@ -42,7 +42,7 @@
  
  @param context NSManagedObjectContext
  */
-- (void)updateAppCoreDataContext:(NSManagedObjectContext *)context;
+- (void)updateAppCoreDataContext:(nonnull NSManagedObjectContext *)context;
 
 
 @end

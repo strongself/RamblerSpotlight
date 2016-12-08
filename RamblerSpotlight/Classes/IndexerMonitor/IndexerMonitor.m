@@ -42,11 +42,11 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithIndexers:(NSArray<id<ObjectIndexer>> *)indexers
-                 changeProviders:(NSArray<id<ChangeProvider>> *)changeProviders
-                    stateStorage:(IndexerStateStorage *)stateStorage
-                    queueFactory:(IndexerMonitorOperationQueueFactory *)queueFactory
-                 searchableIndex:(CSSearchableIndex *)searchableIndex {
+- (instancetype)initWithIndexers:(nonnull NSArray<id<ObjectIndexer>> *)indexers
+                 changeProviders:(nonnull NSArray<id<ChangeProvider>> *)changeProviders
+                    stateStorage:(nonnull IndexerStateStorage *)stateStorage
+                    queueFactory:(nonnull IndexerMonitorOperationQueueFactory *)queueFactory
+                 searchableIndex:(nonnull CSSearchableIndex *)searchableIndex {
     self = [super init];
     if (self) {
         _indexers = indexers;
@@ -58,11 +58,11 @@
     return self;
 }
 
-+ (instancetype)monitorWithIndexers:(NSArray <id<ObjectIndexer>> *)indexers
-                    changeProviders:(NSArray <id<ChangeProvider>> *)changeProviders
-                       stateStorage:(IndexerStateStorage *)stateStorage
-                       queueFactory:(IndexerMonitorOperationQueueFactory *)queueFactory
-                    searchableIndex:(CSSearchableIndex *)searchableIndex {
++ (instancetype)monitorWithIndexers:(nonnull NSArray <id<ObjectIndexer>> *)indexers
+                    changeProviders:(nonnull NSArray <id<ChangeProvider>> *)changeProviders
+                       stateStorage:(nonnull IndexerStateStorage *)stateStorage
+                       queueFactory:(nonnull IndexerMonitorOperationQueueFactory *)queueFactory
+                    searchableIndex:(nonnull CSSearchableIndex *)searchableIndex {
     
     IndexerMonitor *indexerMonitor = [[self alloc] initWithIndexers:indexers
                                                     changeProviders:changeProviders
@@ -103,17 +103,17 @@
 
 #pragma mark - <ChangeProviderDelegate>
 
-- (void)changeProvider:(id<ChangeProvider>)changeProvider
+- (void)changeProvider:(nullable id<ChangeProvider>)changeProvider
   didGetChangeWithType:(ChangeProviderChangeType)changeType
-         forObjectType:(NSString *)objectType
-      objectIdentifier:(NSString *)objectIdentifier {
+         forObjectType:(nonnull NSString *)objectType
+      objectIdentifier:(nonnull NSString *)objectIdentifier {
     IndexTransaction *transaction = [IndexTransaction transactionWithIdentifier:objectIdentifier
                                                                      objectType:objectType
                                                                      changeType:changeType];
     [self.stateStorage insertTransaction:transaction];
 }
 
-- (void)didFinishChangingObjectsInChangeProvider:(id<ChangeProvider>)changeProvider {
+- (void)didFinishChangingObjectsInChangeProvider:(nullable id<ChangeProvider>)changeProvider {
     [self processIndexing];
 }
 
@@ -156,7 +156,7 @@
     [self.operationQueue addOperation:indexOperation];
 }
 
-- (id<ObjectIndexer>)obtainIndexerForObjectType:(NSString *)objectType {
+- (id<ObjectIndexer>)obtainIndexerForObjectType:(nonnull NSString *)objectType {
     id<ObjectIndexer> result = nil;
     for (id<ObjectIndexer> indexer in self.indexers) {
         if ([indexer canIndexObjectWithType:objectType]) {

@@ -43,7 +43,7 @@
  
  @return CSSearchableItem
  */
-- (CSSearchableItem *)searchableItemForObject:(id)object;
+- (CSSearchableItem *)searchableItemForObject:(nonnull id)object;
 
 /**
  Check that object can be indexed by this class
@@ -52,6 +52,6 @@
  
  @return BOOL
  */
-- (BOOL)canIndexObjectWithType:(NSString *)objectType;
+- (BOOL)canIndexObjectWithType:(nonnull NSString *)objectType;
 
 @end

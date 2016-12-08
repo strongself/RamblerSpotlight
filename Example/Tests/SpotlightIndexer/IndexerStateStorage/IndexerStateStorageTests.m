@@ -83,7 +83,7 @@
     NSString *const RSTestObjectType = @"user";
     IndexTransaction *transaction = [IndexTransaction transactionWithIdentifier:RSTestIdentifier
                                                                      objectType:RSTestObjectType
-                                                                     changeType:ChangeProviderChangeInsert];
+                                                                     changeType:ChangeProviderChangeTypeInsert];
     
     __block IndexState *expectedState = nil;
     [self.context MR_saveWithBlockAndWait:^(NSManagedObjectContext * _Nonnull localContext) {
@@ -116,7 +116,7 @@
 
     // when
     [self.stateStorage insertTransactionsArray:testArray
-                                    changeType:ChangeProviderChangeInsert];
+                                    changeType:ChangeProviderChangeTypeInsert];
     
     // then
     states = [IndexState MR_findAllInContext:self.context];
@@ -253,7 +253,7 @@
     for (NSUInteger i = 0; i < count; i++) {
         IndexTransaction *transaction = [IndexTransaction transactionWithIdentifier:[[NSUUID UUID] UUIDString]
                                                                          objectType:objectType
-                                                                         changeType:ChangeProviderChangeInsert];
+                                                                         changeType:ChangeProviderChangeTypeInsert];
         [mutableTransactions addObject:transaction];
     }
     return [mutableTransactions copy];

@@ -25,19 +25,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface IndexState : NSManagedObject
 
-- (void)insertIdentifier:(NSString *)identifier
+- (void)insertIdentifier:(nonnull NSString *)identifier
                  forType:(NSUInteger)type;
 
-- (void)removeIdentifier:(NSString *)identifier
+- (void)removeIdentifier:(nonnull NSString *)identifier
                  forType:(NSUInteger)type;
 
-- (void)insertIdentifiers:(NSArray *)identifiers
+- (void)insertIdentifiers:(nonnull NSArray *)identifiers
                   forType:(NSUInteger)type;
 
-- (void)removeIdentifiers:(NSArray *)identifiers
+- (void)removeIdentifiers:(nonnull NSArray *)identifiers
                   forType:(NSUInteger)type;
 
-- (NSUInteger)typeForIdentifiersSet:(NSMutableOrderedSet *)identifiersSet;
+- (NSUInteger)typeForIdentifiersSet:(nonnull NSMutableOrderedSet *)identifiersSet;
 
 - (NSMutableOrderedSet *)identifiersSetForType:(NSUInteger)type;
 

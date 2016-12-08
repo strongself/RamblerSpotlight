@@ -34,8 +34,8 @@
 
  @return Founded object
  */
-- (id)findFirstWithEntityName:(NSString *)entityName
-                    inContext:(NSManagedObjectContext *)context;
+- (id)findFirstWithEntityName:(nonnull NSString *)entityName
+                    inContext:(nonnull NSManagedObjectContext *)context;
 
 /**
  Find first object for concrete entity in context
@@ -47,10 +47,10 @@
  
  @return Founded object
  */
-- (id)findFirstOrCreateWithEntityName:(NSString *)entityName
-                          byAttribute:(NSString *)attribute
-                            withValue:(id)searchValue
-                            inContext:(NSManagedObjectContext *)context;
+- (id)findFirstOrCreateWithEntityName:(nonnull NSString *)entityName
+                          byAttribute:(nonnull NSString *)attribute
+                            withValue:(nonnull id)searchValue
+                            inContext:(nonnull NSManagedObjectContext *)context;
 
 /**
  Find first object by predicate for concrete entity in context
@@ -63,10 +63,10 @@
  
  @return Founded object
  */
-- (id)findFirstWithPredicate:(NSPredicate *)searchTerm
-                  entityName:(NSString *)entityName
-                    sortedBy:(NSString *)property
+- (id)findFirstWithPredicate:(nonnull NSPredicate *)searchTerm
+                  entityName:(nonnull NSString *)entityName
+                    sortedBy:(nonnull NSString *)property
                    ascending:(BOOL)ascending
-                   inContext:(NSManagedObjectContext *)context;
+                   inContext:(nonnull NSManagedObjectContext *)context;
 
 @end

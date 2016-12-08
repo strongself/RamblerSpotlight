@@ -37,16 +37,16 @@
  @param objectType       The type of changed object
  @param objectIdentifier The type of object identifier
  */
-- (void)changeProvider:(id<ChangeProvider>)changeProvider
+- (void)changeProvider:(nullable id<ChangeProvider>)changeProvider
   didGetChangeWithType:(ChangeProviderChangeType)changeType
-         forObjectType:(NSString *)objectType
-      objectIdentifier:(NSString *)objectIdentifier;
+         forObjectType:(nonnull NSString *)objectType
+      objectIdentifier:(nonnull NSString *)objectIdentifier;
 
 /**
  Method notifies delegate that a batch of changes is over
  
  @param changeProvider ChangeProvider itself
  */
-- (void)didFinishChangingObjectsInChangeProvider:(id<ChangeProvider>)changeProvider;
+- (void)didFinishChangingObjectsInChangeProvider:(nullable id<ChangeProvider>)changeProvider;
 
 @end

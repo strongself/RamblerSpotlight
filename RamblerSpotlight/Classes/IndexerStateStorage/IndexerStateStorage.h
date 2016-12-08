@@ -32,15 +32,15 @@
  */
 @interface IndexerStateStorage : NSObject
 
-+ (instancetype)stateStorageWithContextProvider:(id<ContextProvider>)contextProvider
-                                coreDataHandler:(id<SpotlightCoreDataHandler>)coreDataHandler;
++ (instancetype)stateStorageWithContextProvider:(nonnull id<ContextProvider>)contextProvider
+                                coreDataHandler:(nonnull id<SpotlightCoreDataHandler>)coreDataHandler;
 
 /**
  Method saves passed transaction to store
  
  @param transaction Index transaction
  */
-- (void)insertTransaction:(IndexTransaction *)transaction;
+- (void)insertTransaction:(nonnull IndexTransaction *)transaction;
 
 /**
  Method saves an array of transaction arrays to store
@@ -48,7 +48,7 @@
  @param transactionsArray NSArray<NSArray *> of transactions
  @param changeType        ChangeProviderChangeType
  */
-- (void)insertTransactionsArray:(NSArray<NSArray *> *)transactionsArray
+- (void)insertTransactionsArray:(nonnull NSArray<NSArray *> *)transactionsArray
                      changeType:(ChangeProviderChangeType)changeType;
 
 /**
@@ -63,7 +63,7 @@
  
  @param batch Transaction batch
  */
-- (void)removeProcessedBatch:(IndexTransactionBatch *)batch;
+- (void)removeProcessedBatch:(nonnull IndexTransactionBatch *)batch;
 
 /**
  Method checks whether indexing process ever started

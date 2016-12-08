@@ -32,8 +32,8 @@
 
 #pragma mark - Initialization
 
-- (instancetype)initWithIdentifier:(NSString *)identifier
-                        objectType:(NSString *)objectType
+- (instancetype)initWithIdentifier:(nonnull NSString *)identifier
+                        objectType:(nonnull NSString *)objectType
                         changeType:(ChangeProviderChangeType)changeType {
     self = [super init];
     if (self) {
@@ -44,8 +44,8 @@
     return self;
 }
 
-+ (instancetype)transactionWithIdentifier:(NSString *)identifier
-                               objectType:(NSString *)objectType
++ (instancetype)transactionWithIdentifier:(nonnull NSString *)identifier
+                               objectType:(nonnull NSString *)objectType
                                changeType:(NSUInteger)changeType {
     return [[self alloc] initWithIdentifier:identifier
                                  objectType:objectType

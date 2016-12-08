@@ -42,8 +42,8 @@ static NSString *const RSBundleType = @"bundle";
 
 #pragma mark - Initialization
 
-- (instancetype)initWithContextStorage:(id<ContextFiller, ContextProvider>)contextStorage
-                           fileManager:(NSFileManager *)fileManager {
+- (instancetype)initWithContextStorage:(nonnull id<ContextFiller, ContextProvider>)contextStorage
+                           fileManager:(nonnull NSFileManager *)fileManager {
     self = [super init];
     if (self) {
         _contextStorage = contextStorage;
@@ -52,8 +52,8 @@ static NSString *const RSBundleType = @"bundle";
     return self;
 }
 
-+ (instancetype)coordinatorWithContextStorage:(id<ContextFiller, ContextProvider>)contextStorage
-                                  fileManager:(NSFileManager *)fileManager {
++ (instancetype)coordinatorWithContextStorage:(nonnull id<ContextFiller, ContextProvider>)contextStorage
+                                  fileManager:(nonnull NSFileManager *)fileManager {
     return [[self alloc] initWithContextStorage:contextStorage
                                     fileManager:fileManager];
 }
@@ -87,7 +87,7 @@ static NSString *const RSBundleType = @"bundle";
                                                          error:nil];
 }
 
-- (void)updateAppCoreDataContext:(NSManagedObjectContext *)context {
+- (void)updateAppCoreDataContext:(nonnull NSManagedObjectContext *)context {
     [self.contextStorage setupAppContext:context];
 }
 

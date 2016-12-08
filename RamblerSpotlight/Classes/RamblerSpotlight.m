@@ -38,9 +38,9 @@
 
 @implementation RamblerSpotlight
 
-- (void)setupSpotlightWithSpotlightEntityObjects:(NSArray<SpotlightEntityObject *> *)entityObjects
-                                      appContext:(NSManagedObjectContext *)appContext
-                                 searchableIndex:(CSSearchableIndex *)searchableIndex {
+- (void)setupSpotlightWithSpotlightEntityObjects:(nonnull NSArray<SpotlightEntityObject *> *)entityObjects
+                                      appContext:(nonnull NSManagedObjectContext *)appContext
+                                 searchableIndex:(nonnull CSSearchableIndex *)searchableIndex {
     SpotlightAssembly *spotlightFactory = [SpotlightAssembly new];
     
     ContextStorageImplementation *contextStorage = [spotlightFactory contextStorageWithAppContext:appContext];
