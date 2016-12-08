@@ -1,13 +1,12 @@
-![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-orange.svg)
-![Status](https://img.shields.io/badge/status-beta-red.svg)
-
 ## Overview
 
 **RamblerSpotlight** is easy way to setup CoreSpotlight in your app.
 
 <img src="https://habrastorage.org/files/441/411/e31/441411e31416405d89f44555553f1716.jpg" height="300" />
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-orange.svg)
+![Status](https://img.shields.io/badge/status-beta-red.svg)
 
          | Key Features
 ---------|---------------
