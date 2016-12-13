@@ -18,8 +18,9 @@
 
 ## Installation
 
-```objective-c
-pod RamblerSpotlight
+```ruby
+# Latest release of RamblerSpotlight
+pod 'RamblerSpotlight'
 ```
 
 Development target: ios 9.0 or later
