@@ -1,8 +1,9 @@
 ## Overview
 
 **RamblerSpotlight** is easy way to setup CoreSpotlight in your app.
-
-<img src="https://habrastorage.org/files/441/411/e31/441411e31416405d89f44555553f1716.jpg" height="300" />
+<p align="center">
+  <img src="https://habrastorage.org/files/441/411/e31/441411e31416405d89f44555553f1716.jpg" height="300" />
+</p>
 ![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-orange.svg)
@@ -17,7 +18,9 @@
 
 ## Installation
 
-`pod RamblerSpotlight`
+```objective-c
+pod RamblerSpotlight
+```
 
 Development target: ios 9.0 or later
 
@@ -31,7 +34,7 @@ Before using read [our article on Habrahabr.ru](https://habrahabr.ru/company/ram
 
 You need to create next classes:
 
-`
+```objective-c
 @interface NameEntityChangeProviderFetchRequestFactory : NSObject <ChangeProviderFetchRequestFactory> 
 ...
 
@@ -40,25 +43,25 @@ You need to create next classes:
 
 @interface NameEntityObjectTransformer : NSObject <ObjectTransformer>
 ...
-`
+```
 
 After that create SpotlightEntityObject:
 
-`
+```objective-c
 SpotlightEntityObject *spotlightEntity = [SpotlightEntityObject entityObjectWithObjectTransformer:objectTransformer
                                                                                        requestFactory:requestFactory
                                                                                         objectIndexer:objectIndexer];
-`
+```
 
  2. Create RamblerSpotlight's object
 
-`
+```objective-c
 RamblerSpotlight *ramblerSpotlight = [[RamblerSpotlight alloc] init];
-`
+```
 
  3. Setup RamblerSpotlight with entities, your app's context and CSSearchableIndex
 
-`
+```objective-c
 NSArray<SpotlightEntityObject *> *entitiesObjects = @[...];
 NSManagedObjectContext *context ... ;
 CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
@@ -66,13 +69,13 @@ CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
 [ramblerSpotlight setupSpotlightWithSpotlightEntitiesObjects:entitiesObjects
                                                   appContext:context
                                              searchableIndex:searchableIndex];
-`
+```
     
  4. Start monitoring for changes to your objects in CoreData
 
-`
+```objective-c
 [ramblerSpotlight startMonitoring];
-`
+```
 
 ## Author
 
