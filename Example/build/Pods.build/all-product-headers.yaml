@@ -1,0 +1,168 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/Example/build/Debug-iphonesimulator/RamblerSpotlight.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "ChangeProvider.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ChangeProviders/Protocols/ChangeProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChangeProviderChangeType.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/Transactions/Headers/ChangeProviderChangeType.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChangeProviderDelegate.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ChangeProviders/Protocols/ChangeProviderDelegate.h"
+        },
+        {
+          'type': 'file',
+          'name': "ChangeProviderFetchRequestFactory.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ChangeProviders/BaseClasses/FetchedResultsControllerChangeProvider/ChangeProviderFetchRequestFactories/Protocols/ChangeProviderFetchRequestFactory.h"
+        },
+        {
+          'type': 'file',
+          'name': "ContextFiller.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/ContextStorage/ContextFiller.h"
+        },
+        {
+          'type': 'file',
+          'name': "ContextProvider.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/ContextStorage/ContextProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "ContextStorageImplementation.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/ContextStorage/ContextStorageImplementation.h"
+        },
+        {
+          'type': 'file',
+          'name': "FetchedResultsControllerChangeProvider.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ChangeProviders/BaseClasses/FetchedResultsControllerChangeProvider/FetchedResultsControllerChangeProvider.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexState+CoreDataProperties.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/Entities/IndexState/IndexState+CoreDataProperties.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexState.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/Entities/IndexState/IndexState.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexTransaction.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/Transactions/IndexTransaction/IndexTransaction.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexTransactionBatch.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/Transactions/IndexTransactionBatch/IndexTransactionBatch.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexerMonitor.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/IndexerMonitor/IndexerMonitor.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexerMonitorOperationQueueFactory.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/IndexerMonitor/IndexerMonitorOperationQueueFactory/IndexerMonitorOperationQueueFactory.h"
+        },
+        {
+          'type': 'file',
+          'name': "IndexerStateStorage.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/IndexerStateStorage/IndexerStateStorage.h"
+        },
+        {
+          'type': 'file',
+          'name': "ObjectIndexer.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ObjectIndexers/Protocols/ObjectIndexer.h"
+        },
+        {
+          'type': 'file',
+          'name': "ObjectIndexerBase.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ObjectIndexers/BaseClasses/ObjectIndexerBase/ObjectIndexerBase.h"
+        },
+        {
+          'type': 'file',
+          'name': "ObjectTransformer.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ObjectTransformers/Protocols/ObjectTransformer.h"
+        },
+        {
+          'type': 'file',
+          'name': "ObjectTransformerConstants.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/ObjectTransformers/Constants/ObjectTransformerConstants.h"
+        },
+        {
+          'type': 'file',
+          'name': "RamblerSpotlight-Swift.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/Example/build/Debug-iphonesimulator/RamblerSpotlight.framework/Headers/RamblerSpotlight-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "RamblerSpotlight-umbrella.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/Example/Pods/Target Support Files/RamblerSpotlight/RamblerSpotlight-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "RamblerSpotlight.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/RamblerSpotlight.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightAssembly.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/SpotlightIndexerAssembly/SpotlightAssembly.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightCoreDataHandler.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/SpotlightCoreDataHandler.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightCoreDataHandlerImplementation.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/CoreDataHandler/SpotlightCoreDataHandlerImplementation.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightCoreDataStackCoordinator.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/CoreDataStackCoordinator/SpotlightCoreDataStackCoordinator.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightCoreDataStackCoordinatorImplementation.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/CoreDataStack/CoreDataStackCoordinator/SpotlightCoreDataStackCoordinatorImplementation.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightEntityObject.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/SpotlightObject/SpotlightEntityObject.h"
+        },
+        {
+          'type': 'file',
+          'name': "SpotlightIndexerConstants.h",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/RamblerSpotlight/Classes/Constants/SpotlightIndexerConstants.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/Example/build/Debug-iphonesimulator/RamblerSpotlight.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/k.zinovyev/Documents/Rambler/RamblerSpotlight/Example/build/Pods.build/Debug-iphonesimulator/RamblerSpotlight.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

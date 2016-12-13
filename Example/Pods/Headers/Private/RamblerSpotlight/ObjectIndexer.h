@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/ObjectIndexers/Protocols/ObjectIndexer.h

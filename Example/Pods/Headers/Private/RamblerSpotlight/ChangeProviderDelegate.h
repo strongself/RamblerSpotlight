@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/ChangeProviders/Protocols/ChangeProviderDelegate.h

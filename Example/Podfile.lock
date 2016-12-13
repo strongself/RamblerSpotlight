@@ -1,0 +1,22 @@
+PODS:
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
+  - OCMock (3.3.1)
+  - RamblerSpotlight (0.1.0)
+
+DEPENDENCIES:
+  - MagicalRecord
+  - OCMock
+  - RamblerSpotlight (from `../`)
+
+EXTERNAL SOURCES:
+  RamblerSpotlight:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
+  OCMock: f3f61e6eaa16038c30caa5798c5e49d3307b6f22
+  RamblerSpotlight: c48d97ee647b9a4609ea81f402a6afd3c1a79e5d
+
+COCOAPODS: 0.39.0

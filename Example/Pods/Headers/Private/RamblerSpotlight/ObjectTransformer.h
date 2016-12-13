@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/ObjectTransformers/Protocols/ObjectTransformer.h

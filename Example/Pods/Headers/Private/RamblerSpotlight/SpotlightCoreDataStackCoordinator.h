@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/CoreDataStack/CoreDataStackCoordinator/SpotlightCoreDataStackCoordinator.h

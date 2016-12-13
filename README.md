@@ -2,18 +2,18 @@
 
 **RamblerSpotlight** is easy way to setup CoreSpotlight in your app.
 
-
-
 <img src="https://habrastorage.org/files/441/411/e31/441411e31416405d89f44555553f1716.jpg" height="300" />
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-orange.svg)
+![Status](https://img.shields.io/badge/status-beta-red.svg)
 
-
-
-### Key features
-
-- Provides all the infrastructure for using dynamic objects in Spotlight
-- Keeps Spotlight data up to date
-- Saves data that need index later
-- Battle-tested into several *Rambler&Co* projects.
+         | Key Features
+---------|---------------
+&#128640; | Provides all the infrastructure for using objects in Spotlight.
+&#9851;   | Keeps Spotlight data up to date.
+&#128190; | Saves data that needs index later.
+&#128242; | Battle-tested into several *Rambler&Co* projects.
 
 ## Installation
 
@@ -25,9 +25,7 @@ Development target: ios 9.0 or later
 
 For full information clone the example project
 
-Before using read our article:
-
-https://habrahabr.ru/company/rambler-co/blog/268257/
+Before using read [our article on Habrahabr.ru](https://habrahabr.ru/company/rambler-co/blog/268257/)
 
  1. Create SpotlightEntityObject for your entity.
 
@@ -44,7 +42,7 @@ You need to create next classes:
 ...
 `
 
-Aftet that create SpotlightEntityObject:
+After that create SpotlightEntityObject:
 
 `
 SpotlightEntityObject *spotlightEntity = [SpotlightEntityObject entityObjectWithObjectTransformer:objectTransformer
@@ -61,8 +59,8 @@ RamblerSpotlight *ramblerSpotlight = [[RamblerSpotlight alloc] init];
  3. Setup RamblerSpotlight with entities, your app's context and CSSearchableIndex
 
 `
-NSArray<SpotlightEntitieObject> *entitiesObjects = @[...];
-NSManagedObjectContext *context = [MagicalRecord MR_defaultContext];
+NSArray<SpotlightEntityObject *> *entitiesObjects = @[...];
+NSManagedObjectContext *context ... ;
 CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
 
 [ramblerSpotlight setupSpotlightWithSpotlightEntitiesObjects:entitiesObjects
@@ -78,11 +76,11 @@ CSSearchableIndex *searchableIndex =  [CSSearchableIndex defaultContext];
 
 ## Author
 
-k.zinovyev, k.zinovyev@rambler-co.ru
+- Konstantin Zinovyev, k.zinovyev@rambler-co.ru
 
-e.tolstoy, e.tolstoy@rambler-co.ru
+- Egor Tolstoy, e.tolstoy@rambler-co.ru
 
-v.smal, v.smal@rambler-co.ru
+- Vadim Smal, v.smal@rambler-co.ru
 
 ## Links
 

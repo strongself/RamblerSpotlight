@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/Transactions/IndexTransactionBatch/IndexTransactionBatch.h

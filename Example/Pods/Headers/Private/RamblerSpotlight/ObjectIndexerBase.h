@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/ObjectIndexers/BaseClasses/ObjectIndexerBase/ObjectIndexerBase.h
