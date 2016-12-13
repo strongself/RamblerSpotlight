@@ -1,0 +1,1 @@
+../../../../../RamblerSpotlight/Classes/IndexerStateStorage/IndexerStateStorage.h

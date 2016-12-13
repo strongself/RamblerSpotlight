@@ -1,0 +1,14 @@
+source 'https://github.com/cocoapods/Specs.git'
+
+platform :ios, '9.0'
+use_frameworks!
+
+target 'RamblerSpotlight_Example' do
+  
+  pod 'RamblerSpotlight', :path => '../'
+  
+  target 'RamblerSpotlight_Tests' do
+      pod 'OCMock'
+      pod 'MagicalRecord'
+  end
+end
