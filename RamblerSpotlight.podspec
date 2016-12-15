@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
                        }
   s.source           = { :git => 'https://gitlab.rambler.ru/cocoapods/RamblerSpotlight.git', :tag => s.version.to_s }
   s.source_files = 'RamblerSpotlight/Classes/**/*{h,m}'
-  s.platform      = :ios, '9.0'
+  s.platform      = :ios, '8.0'
   s.frameworks = 'CoreData'
   s.resource_bundles = {
     'RamblerSpotlightDataBase' => ['RamblerSpotlight/Classes/CoreDataStack/DataModel/*.xcdatamodeld']
