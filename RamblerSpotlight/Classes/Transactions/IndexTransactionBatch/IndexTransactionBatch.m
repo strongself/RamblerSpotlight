@@ -22,11 +22,11 @@
 
 @interface IndexTransactionBatch ()
 
-@property (nonatomic, copy, readwrite) NSOrderedSet *insertIdentifiers;
-@property (nonatomic, copy, readwrite) NSOrderedSet *updateIdentifiers;
-@property (nonatomic, copy, readwrite) NSOrderedSet *deleteIdentifiers;
-@property (nonatomic, copy, readwrite) NSOrderedSet *moveIdentifiers;
-@property (nonatomic, copy, readwrite) NSString *objectType;
+@property (nonatomic, copy, readwrite, nullable) NSOrderedSet *insertIdentifiers;
+@property (nonatomic, copy, readwrite, nullable) NSOrderedSet *updateIdentifiers;
+@property (nonatomic, copy, readwrite, nullable) NSOrderedSet *deleteIdentifiers;
+@property (nonatomic, copy, readwrite, nullable) NSOrderedSet *moveIdentifiers;
+@property (nonatomic, copy, readwrite, nonnull) NSString *objectType;
 
 @end
 

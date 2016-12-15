@@ -47,11 +47,11 @@
     self.appContext = appContext;
 }
 
-- (void)setupSpotlightPrimaryContext:(nonnull NSManagedObjectContext *)context {
+- (void)setupSpotlightPrimaryContext:(nullable NSManagedObjectContext *)context {
     self.spotlightPrimaryContext = context;
 }
     
-- (void)setupAppContext:(nonnull NSManagedObjectContext *)context {
+- (void)setupAppContext:(nullable NSManagedObjectContext *)context {
     self.appContext = context;
 }
 

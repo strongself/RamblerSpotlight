@@ -32,13 +32,13 @@
  
  @param context NSManagedObjectContext
  */
-- (void)setupSpotlightPrimaryContext:(nonnull NSManagedObjectContext *)context;
+- (void)setupSpotlightPrimaryContext:(nullable NSManagedObjectContext *)context;
 
 /**
  This method retains a given context that used in app and stores it during the app lifecycle
  
  @param context NSManagedObjectContext
  */
-- (void)setupAppContext:(nonnull NSManagedObjectContext *)context;
+- (void)setupAppContext:(nullable NSManagedObjectContext *)context;
 
 @end

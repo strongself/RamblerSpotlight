@@ -22,8 +22,8 @@
 
 @interface IndexTransaction ()
 
-@property (nonatomic, copy, readwrite) NSString *identifier;
-@property (nonatomic, copy, readwrite) NSString *objectType;
+@property (nonatomic, copy, readwrite, nonnull) NSString *identifier;
+@property (nonatomic, copy, readwrite, nonnull) NSString *objectType;
 @property (nonatomic, assign, readwrite) ChangeProviderChangeType changeType;
 
 @end
