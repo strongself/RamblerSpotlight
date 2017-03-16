@@ -63,9 +63,9 @@
  
  @return Founded object
  */
-- (nullable id)findFirstWithPredicate:(nonnull NSPredicate *)searchTerm
+- (nullable id)findFirstWithPredicate:(nullable NSPredicate *)searchTerm
                            entityName:(nonnull NSString *)entityName
-                             sortedBy:(nonnull NSString *)property
+                             sortedBy:(nullable NSString *)property
                             ascending:(BOOL)ascending
                             inContext:(nonnull NSManagedObjectContext *)context;
 

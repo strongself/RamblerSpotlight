@@ -30,11 +30,12 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
 
 - (id)findFirstWithEntityName:(nonnull NSString *)entityName
                     inContext:(nonnull NSManagedObjectContext *)context {
-    NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:entityName];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
     __block NSArray *results = nil;
     [context performBlockAndWait:^{
         NSError *error = nil;
-        results = [context executeFetchRequest:request error:&error];
+        results = [context executeFetchRequest:request
+                                         error:&error];
     }];
     if ([results count] == 0u) {
         return nil;
@@ -42,43 +43,25 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
     return [results firstObject];
 }
 
-- (id)findFirstWithPredicate:(nonnull NSPredicate *)searchTerm
+- (id)findFirstWithPredicate:(nullable NSPredicate *)predicate
                   entityName:(nonnull NSString *)entityName
-                    sortedBy:(nonnull NSString *)property
+                    sortedBy:(nullable NSString *)property
                    ascending:(BOOL)ascending
                    inContext:(nonnull NSManagedObjectContext *)context {
     
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
-                                              inManagedObjectContext:context];
-    [request setEntity:entity];
-    if (searchTerm) {
-        [request setPredicate:searchTerm];
-    }
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
     [request setFetchBatchSize:RSLFetchBatchSize];
-    
-    NSMutableArray *sortDescriptors = [[NSMutableArray alloc] init];
-    NSArray *sortKeys = [property componentsSeparatedByString:@","];
-    for (__strong NSString *sortKey in sortKeys) {
-        NSArray *sortComponents = [sortKey componentsSeparatedByString:@":"];
-        if (sortComponents.count > 1u) {
-            NSString *customAscending = sortComponents.lastObject;
-            ascending = customAscending.boolValue;
-            sortKey = sortComponents[0u];
-        }
-        
-        NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:sortKey ascending:ascending];
-        [sortDescriptors addObject:sortDescriptor];
+    [request setFetchLimit:RSLFetchBatchLimit];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:property
+                                                                   ascending:ascending];
+    [request setSortDescriptors:@[sortDescriptor]];
+    if (predicate != nil) {
+        [request setPredicate:predicate];
     }
     
-    [request setSortDescriptors:sortDescriptors];
-    [request setFetchLimit:RSLFetchBatchLimit];
-    
-    __block NSArray *results = nil;
-    [context performBlockAndWait:^{
-        NSError *error = nil;
-        results = [context executeFetchRequest:request error:&error];
-    }];
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:request
+                                              error:&error];
     
     if ([results count] == 0u) {
         return nil;
@@ -91,27 +74,21 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
                           byAttribute:(nonnull NSString *)attribute
                             withValue:(nonnull id)searchValue
                             inContext:(nonnull NSManagedObjectContext *)context {
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
-                                              inManagedObjectContext:context];
-    [request setEntity:entity];
-    [request setPredicate:[NSPredicate predicateWithFormat:@"%K = %@", attribute, searchValue]];
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
     [request setFetchLimit:RSLFetchBatchLimit];
+    [request setPredicate:[NSPredicate predicateWithFormat:@"%K = %@", attribute, searchValue]];
     
-    __block NSArray *results = nil;
-    [context performBlockAndWait:^{
-        NSError *error = nil;
-        results = [context executeFetchRequest:request
-                                         error:&error];
-    }];
-    id result = nil;
+    NSError *error = nil;
+    NSArray *results = [context executeFetchRequest:request
+                                              error:&error];
     if ([results count] != 0) {
         return [results firstObject];
     }
-    entity = [NSEntityDescription entityForName:entityName
-                         inManagedObjectContext:context];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:entityName
+                                              inManagedObjectContext:context];
     Class class = NSClassFromString(entityName);
-    result = [[class alloc] initWithEntity:entity insertIntoManagedObjectContext:context];
+    id result = [[class alloc] initWithEntity:entity
+               insertIntoManagedObjectContext:context];
     [result setValue:searchValue forKey:attribute];
     
     return result;
