@@ -21,7 +21,6 @@
 #import "SpotlightCoreDataHandlerImplementation.h"
 #import <CoreData/CoreData.h>
 
-static NSUInteger const RSLFetchBatchSize = 20u;
 static NSUInteger const RSLFetchBatchLimit = 1u;
 
 @implementation SpotlightCoreDataHandlerImplementation
@@ -50,7 +49,6 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
                    inContext:(nonnull NSManagedObjectContext *)context {
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    [request setFetchBatchSize:RSLFetchBatchSize];
     [request setFetchLimit:RSLFetchBatchLimit];
     NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:property
                                                                    ascending:ascending];
