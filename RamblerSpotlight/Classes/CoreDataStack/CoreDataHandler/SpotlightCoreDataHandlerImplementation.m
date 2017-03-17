@@ -59,9 +59,12 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
         [request setPredicate:predicate];
     }
     
-    NSError *error = nil;
-    NSArray *results = [context executeFetchRequest:request
-                                              error:&error];
+    __block NSArray *results = nil;
+    [context performBlockAndWait:^{
+        NSError *error = nil;
+        results = [context executeFetchRequest:request
+                                         error:&error];
+    }];
     
     if ([results count] == 0u) {
         return nil;
@@ -78,9 +81,12 @@ static NSUInteger const RSLFetchBatchLimit = 1u;
     [request setFetchLimit:RSLFetchBatchLimit];
     [request setPredicate:[NSPredicate predicateWithFormat:@"%K = %@", attribute, searchValue]];
     
-    NSError *error = nil;
-    NSArray *results = [context executeFetchRequest:request
-                                              error:&error];
+    __block NSArray *results = nil;
+    [context performBlockAndWait:^{
+        NSError *error = nil;
+        results = [context executeFetchRequest:request
+                                         error:&error];
+    }];
     if ([results count] != 0) {
         return [results firstObject];
     }
