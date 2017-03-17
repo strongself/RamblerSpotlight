@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RamblerSpotlight'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'I have Spotlight... I have CoreData... mmm ... RamblerSpotlight'
   s.license          = 'MIT'
 
