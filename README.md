@@ -4,17 +4,18 @@
 <p align="center">
   <img src="https://habrastorage.org/files/441/411/e31/441411e31416405d89f44555553f1716.jpg" height="300" />
 </p>
+
 ![Version](https://img.shields.io/badge/version-1.0.2-brightgreen.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Test Coverage](https://img.shields.io/badge/Test%20Coverage-100%25-orange.svg)
 ![Status](https://img.shields.io/badge/status-beta-red.svg)
 
-         | Key Features
----------|---------------
-&#128640; | Provides all the infrastructure for using objects in Spotlight.
-&#9851;   | Keeps Spotlight data up to date.
-&#128190; | Saves data that needs index later.
-&#128242; | Battle-tested into several *Rambler&Co* projects.
+|         | Key Features |
+|---------|---------------|
+|&#128640; | Provides all the infrastructure for using objects in Spotlight.|
+|&#9851;   | Keeps Spotlight data up to date.|
+|&#128190; | Saves data that needs index later.|
+|&#128242; | Battle-tested into several *Rambler&Co* projects.|
 
 ## Installation
 
@@ -93,6 +94,6 @@ https://habrahabr.ru/company/rambler-co/blog/268257/
 ## License
 
 RamblerSpotlight is available under the MIT license. 
-Copyright (c) 2016 Rambler Digital Solutions
+Copyright (c) 2016 StrongSelf community
 
 See the LICENSE file for more info.
